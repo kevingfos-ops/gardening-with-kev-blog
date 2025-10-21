@@ -26,6 +26,7 @@
     .post h2{margin:0 0 6px;color:var(--green)}
     .date{color:var(--muted);font-size:13px;margin-bottom:10px}
     .post img.main{width:100%;max-width:640px;border-radius:12px;margin-bottom:12px}
+    .welcome{margin-top:14px}
     .gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:8px}
     .gallery img{width:100%;border-radius:10px}
     .yt-embed{width:100%;aspect-ratio:16/9;border-radius:8px;border:0}
@@ -35,7 +36,7 @@
     .about{display:flex;gap:12px;align-items:center}
     .about img{width:64px;height:64px;border-radius:999px;object-fit:cover}
     .amazon-prod{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px}
-    .amazon-prod img{width:120px;height:90px;object-fit:cover;border-radius:8px}
+    .amazon-prod img{width:120px;height:120px;object-fit:cover;border-radius:8px}  /* square thumbs */
     footer{margin:28px 0;text-align:center;color:var(--muted);font-size:14px}
     @media (max-width:880px){.hero{grid-template-columns:1fr}}
   </style>
@@ -56,6 +57,11 @@
         <a href="#contact">Contact</a>
       </nav>
     </header>
+
+    <div class="welcome card">
+      <p style="margin:0 0 4px;font-weight:600;">🌱 Welcome to Gardening With Kev — growing naturally, Jamaican style.</p>
+      <p style="margin:0;color:#2f6e3f">Discover easy gardening tips, traditional remedies, and plant wisdom inspired by Jamaica.</p>
+    </div>
 
     <main class="hero">
       <section id="posts">
@@ -115,7 +121,7 @@
         </div>
 
         <div class="card sidebar-section">
-          <h4 style="margin:0 0 8px;color:var(--green)">Shop My Amazon Picks</h4>
+          <h4 style="margin:0 0 8px;color:var(--green)">🌿 Featured Garden Tools &amp; Picks</h4>
           <p style="font-size:12px;color:#666">Some of the links below are affiliate links. As an Amazon Associate I earn from qualifying purchases.</p>
 
           <div class="amazon-prod">
