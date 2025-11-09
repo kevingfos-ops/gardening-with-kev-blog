@@ -1,108 +1,217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Books & eBooks | Gardening With Kev</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Books & eBooks</title>
   <style>
-    .wrap{max-width:1000px;margin:0 auto;padding:24px}
-    .hero{margin:8px 0 18px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
-    .card{background:#fff;border:1px solid #eee;border-radius:10px;overflow:hidden}
-    .card img{width:100%;height:320px;object-fit:cover;background:#fafafa}
-    .card .body{padding:12px 14px}
-    .cta{background:#f8fff4;border:1px solid #e5f5da;border-radius:10px;padding:14px 16px;margin:12px 0}
-    .btn{display:inline-block;padding:9px 12px;border-radius:8px;border:1px solid #dcdcdc;text-decoration:none}
-    .btn-k{border-color:#b2d7ff}
-    .btn-a{border-color:#ffd38a}
-    .muted{color:#666;font-size:0.92rem}
-    header,footer{padding:14px 0;text-align:center}
-    nav a{margin:0 10px;text-decoration:none}
+    :root {
+      --bg: #fafafa;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --brand: #0ea5e9;
+      --ring: rgba(14,165,233,0.25);
+      --shadow: 0 10px 20px rgba(0,0,0,0.06), 0 2px 6px rgba(0,0,0,0.05);
+      --radius: 16px;
+      --maxw: 1100px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color: var(--text); background: var(--bg); line-height: 1.55; }
+    header { background: #fff; box-shadow: var(--shadow); position: sticky; top: 0; z-index: 10; }
+    .nav { max-width: var(--maxw); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 20px; }
+    .brand { font-weight: 800; letter-spacing: 0.2px; }
+    nav a { text-decoration: none; color: var(--text); margin-left: 16px; padding: 8px 12px; border-radius: 999px; }
+    nav a:hover { background: #f1f5f9; }
+    .container { max-width: var(--maxw); margin: 32px auto; padding: 0 20px 48px; }
+    .banners { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 8px auto 24px; }
+    .banners img { width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow); display: block; }
+    .section-title { font-size: clamp(22px, 2.5vw, 32px); margin: 24px 0 12px; }
+    .featured { display: grid; grid-template-columns: 1fr; gap: 22px; background: var(--card); border-radius: calc(var(--radius) + 4px); padding: 18px; box-shadow: var(--shadow); margin-bottom: 28px; }
+    .featured img { width: 100%; height: auto; border-radius: var(--radius); display: block; }
+    .featured .content h2 { margin: 0 0 10px; font-size: clamp(22px, 2.5vw, 30px); }
+    .featured .content p { margin: 0 0 16px; color: var(--muted); }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn { display: inline-block; padding: 10px 16px; border-radius: 999px; text-decoration: none; font-weight: 600; box-shadow: var(--shadow); transition: transform .05s ease; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--brand); color: #fff; }
+    .btn-outline { border: 2px solid #e5e7eb; color: var(--text); background: #fff; }
+    .grid { display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 18px; }
+    .card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; }
+    .card img { width: 100%; height: auto; display: block; }
+    .card .body { padding: 14px; }
+    .card h3 { margin: 0 0 6px; font-size: 18px; }
+    .card p { margin: 0 0 12px; color: var(--muted); font-size: 14px; }
+    .tag { display: inline-block; padding: 2px 8px; border-radius: 999px; background: #ecfeff; color: #0369a1; border: 1px solid #cffafe; font-size: 12px; margin-bottom: 8px; }
+    @media (min-width: 720px) { .featured { grid-template-columns: 380px 1fr; padding: 22px; } .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (min-width: 1024px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    footer { margin-top: 36px; padding: 24px 0 48px; color: var(--muted); font-size: 14px; border-top: 1px solid #e5e7eb; text-align: center; }
   </style>
 </head>
 <body>
-<header>
-  <h1>Gardening With Kev</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="posts.html">Posts</a>
-    <a href="contact.html">Contact</a>
-    <a href="books.html"><strong>Books & eBooks</strong></a>
-  </nav>
-</header>
-
-<main class="wrap">
-  <section class="hero">
-    <h2>Books & eBooks for Jamaican/Tropical Gardens</h2>
-    <p class="muted">Great reads for our climate. Many are available on Kindle; some have audiobook samples on Audible.</p>
-
-    <div class="cta">
-      <strong>Prefer digital?</strong><br/>
-      Try <a class="btn btn-k" href="https://www.amazon.com/kindle-dbs/hz/signup?tag=gardening00d9-20" target="_blank" rel="noopener">Kindle</a>
-      or <a class="btn btn-a" href="https://www.amazon.com/audible?tag=gardening00d9-20" target="_blank" rel="noopener">Audible</a>.
+  <header>
+    <div class="nav">
+      <div class="brand">Gardening with Kev</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="books.html" aria-current="page">Books & eBooks</a>
+        <a href="posts.html#medicinal-plants">Medicinal Plants</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <section class="grid">
-    <!-- 1 -->
+  <main class="container">
+    <div class="banners">
+      <a href="https://amzn.to/49qnfNU" aria-label="Audible promo" target="_blank" rel="nofollow noopener sponsored">
+        <img src="images/banners/audible-banner.jpg" alt="Try Audible – banner" />
+      </a>
+      <a href="https://amzn.to/3VWAX3j" aria-label="Kindle Unlimited promo" target="_blank" rel="nofollow noopener sponsored">
+        <img src="images/banners/kindle-unlimited-banner.jpg" alt="Kindle Unlimited – banner" />
+      </a>
+    </div>
+
+    <section class="featured" id="featured-ebook">
+      <img src="images/books/healing-herbs-jamaica.jpg" alt="Featured eBook cover" />
+      <div class="content">
+        <h2>Featured eBook</h2>
+        <p>Spotlight title from your Medicinal / Herbal collection.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="https://amzn.to/4oYxj5t" target="_blank" rel="nofollow noopener sponsored">Buy on Amazon</a>
+          <a class="btn btn-outline" href="#medicinal-plants">See Medicinal Plants</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">MAIN Gardening Books</h2>
+      <div class="grid">
     <article class="card">
-      <img src="assets/books/common-medicinal-plants-portland.jpg" alt="Common Medicinal Plants of Portland, Jamaica cover">
+      <a href="https://amzn.to/43lDeZZ" target="_blank" rel="nofollow noopener sponsored">
+        <img src="images/books/gardening-the-tropics.jpg" alt="Gardening the Tropics cover" loading="lazy" />
+      </a>
       <div class="body">
-        <h3 style="margin:0 0 6px;">Common Medicinal Plants of Portland, Jamaica</h3>
-        <p class="muted">Field-friendly reference to plants used across eastern Jamaica.</p>
-        <a class="btn" href="https://amzn.to/4ovqfgT" target="_blank" rel="noopener">View on Amazon</a>
+        <span class="tag">Book</span>
+        <h3>Gardening the Tropics</h3>
+        <p> </p>
+        <a class="btn btn-primary" href="https://amzn.to/43lDeZZ" target="_blank" rel="nofollow noopener sponsored">View on Amazon</a>
       </div>
     </article>
-
-    <!-- 2 -->
+    
     <article class="card">
-      <img src="assets/books/healing-herbs-of-jamaica.jpg" alt="Healing Herbs of Jamaica cover">
+      <a href="https://amzn.to/49IZa5b" target="_blank" rel="nofollow noopener sponsored">
+        <img src="images/books/gardening-in-the-caribbean.jpg" alt="Gardening in the Caribbean cover" loading="lazy" />
+      </a>
       <div class="body">
-        <h3 style="margin:0 0 6px;">Healing Herbs of Jamaica (2nd ed.)</h3>
-        <p class="muted">Traditional remedies and local plant uses from Jamaica.</p>
-        <a class="btn" href="https://amzn.to/3LOYYay" target="_blank" rel="noopener">View on Amazon</a>
+        <span class="tag">Book</span>
+        <h3>Gardening in the Caribbean</h3>
+        <p> </p>
+        <a class="btn btn-primary" href="https://amzn.to/49IZa5b" target="_blank" rel="nofollow noopener sponsored">View on Amazon</a>
       </div>
     </article>
-
-    <!-- 3 -->
+    
     <article class="card">
-      <img src="assets/books/healing-herbs-caribbean-beyond.jpg" alt="The Healing Herbs of the Caribbean and Beyond cover">
+      <a href="https://amzn.to/49EeFLK" target="_blank" rel="nofollow noopener sponsored">
+        <img src="images/books/container-gardening-caribbean.jpg" alt="Container Gardening for the Caribbean & Tropics cover" loading="lazy" />
+      </a>
       <div class="body">
-        <h3 style="margin:0 0 6px;">The Healing Herbs of the Caribbean & Beyond</h3>
-        <p class="muted">Regional herbal traditions and practical applications.</p>
-        <a class="btn" href="https://amzn.to/4oYxj5t" target="_blank" rel="noopener">View on Amazon</a>
+        <span class="tag">Book</span>
+        <h3>Container Gardening for the Caribbean & Tropics</h3>
+        <p> </p>
+        <a class="btn btn-primary" href="https://amzn.to/49EeFLK" target="_blank" rel="nofollow noopener sponsored">View on Amazon</a>
       </div>
     </article>
-
-    <!-- 4 -->
+    
     <article class="card">
-      <img src="assets/books/jamaican-herbal-remedy-guide.jpg" alt="The Complete Jamaican Herbal Remedy Guide cover">
+      <a href="https://amzn.to/49IbMcO" target="_blank" rel="nofollow noopener sponsored">
+        <img src="images/books/caribbean-home-garden-guide.jpg" alt="The Caribbean Home Garden Guide cover" loading="lazy" />
+      </a>
       <div class="body">
-        <h3 style="margin:0 0 6px;">The Complete Jamaican Herbal Remedy Guide</h3>
-        <p class="muted">Remedies, recipes, and natural solutions using Jamaican plants.</p>
-        <a class="btn" href="https://amzn.to/43jKA05" target="_blank" rel="noopener">View on Amazon</a>
+        <span class="tag">Book</span>
+        <h3>The Caribbean Home Garden Guide</h3>
+        <p> </p>
+        <a class="btn btn-primary" href="https://amzn.to/49IbMcO" target="_blank" rel="nofollow noopener sponsored">View on Amazon</a>
       </div>
     </article>
+    </div>
+    </section>
 
-    <!-- 5 -->
+    <section>
+      <h2 class="section-title">Caribbean / Tropical Gardening & Herbal Books</h2>
+      <div class="grid">
     <article class="card">
-      <img src="assets/books/gardening-the-tropics.jpg" alt="Gardening the Tropics cover">
+      <a href="https://amzn.to/4ovqfgT" target="_blank" rel="nofollow noopener sponsored">
+        <img src="images/books/edible-poisonous-plants-caribbean.jpg" alt="Edible & Poisonous Plants of the Caribbean cover" loading="lazy" />
+      </a>
       <div class="body">
-        <h3 style="margin:0 0 6px;">Gardening the Tropics</h3>
-        <p class="muted">Florida & Caribbean fruits, vegetables, and traditions.</p>
-        <a class="btn" href="https://amzn.to/3Xjq3VT" target="_blank" rel="noopener">View on Amazon</a>
+        <span class="tag">Regional</span>
+        <h3>Edible & Poisonous Plants of the Caribbean</h3>
+        <p> </p>
+        <a class="btn btn-primary" href="https://amzn.to/4ovqfgT" target="_blank" rel="nofollow noopener sponsored">View on Amazon</a>
       </div>
     </article>
-  </section>
+    
+    <article class="card">
+      <a href="https://amzn.to/3LOYYay" target="_blank" rel="nofollow noopener sponsored">
+        <img src="images/books/jamaican-herbal-remedy-guide.jpg" alt="Jamaican Herbal Remedy Guide cover" loading="lazy" />
+      </a>
+      <div class="body">
+        <span class="tag">Regional</span>
+        <h3>Jamaican Herbal Remedy Guide</h3>
+        <p> </p>
+        <a class="btn btn-primary" href="https://amzn.to/3LOYYay" target="_blank" rel="nofollow noopener sponsored">View on Amazon</a>
+      </div>
+    </article>
+    </div>
+    </section>
 
-  <p class="muted" style="margin-top:18px;">
-    Disclosure: As an Amazon Associate I earn from qualifying purchases.
-  </p>
-</main>
+    <section id="medicinal-plants">
+      <h2 class="section-title">Medicinal / Herbal / Healing Plants eBooks</h2>
+      <div class="grid">
+    <article class="card">
+      <a href="https://amzn.to/4oYxj5t" target="_blank" rel="nofollow noopener sponsored">
+        <img src="images/books/healing-herbs-jamaica.jpg" alt="Healing Herbs of Jamaica cover" loading="lazy" />
+      </a>
+      <div class="body">
+        <span class="tag">Herbal eBook</span>
+        <h3>Healing Herbs of Jamaica</h3>
+        <p> </p>
+        <a class="btn btn-primary" href="https://amzn.to/4oYxj5t" target="_blank" rel="nofollow noopener sponsored">View on Amazon</a>
+      </div>
+    </article>
+    
+    <article class="card">
+      <a href="https://amzn.to/43jKA05" target="_blank" rel="nofollow noopener sponsored">
+        <img src="images/books/common-medicinal-plants-portland.jpg" alt="Common Medicinal Plants of Portland, Jamaica cover" loading="lazy" />
+      </a>
+      <div class="body">
+        <span class="tag">Herbal eBook</span>
+        <h3>Common Medicinal Plants of Portland, Jamaica</h3>
+        <p> </p>
+        <a class="btn btn-primary" href="https://amzn.to/43jKA05" target="_blank" rel="nofollow noopener sponsored">View on Amazon</a>
+      </div>
+    </article>
+    
+    <article class="card">
+      <a href="https://amzn.to/3Xjq3VT" target="_blank" rel="nofollow noopener sponsored">
+        <img src="images/books/healing-herbs-caribbean-beyond.jpg" alt="The Healing Herbs of the Caribbean and Beyond cover" loading="lazy" />
+      </a>
+      <div class="body">
+        <span class="tag">Herbal eBook</span>
+        <h3>The Healing Herbs of the Caribbean and Beyond</h3>
+        <p> </p>
+        <a class="btn btn-primary" href="https://amzn.to/3Xjq3VT" target="_blank" rel="nofollow noopener sponsored">View on Amazon</a>
+      </div>
+    </article>
+    </div>
+    </section>
 
-<footer>
-  <small>Made with love in Jamaica 🌴 by Gardening With Kev</small>
-</footer>
+    <footer>
+      <div>Disclosure: As an Amazon Associate I earn from qualifying purchases. #ads</div>
+      <div style="margin-top:6px;">© <span id="year"></span> Gardening with Kev</div>
+    </footer>
+  </main>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
