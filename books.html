@@ -4,70 +4,66 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Books & eBooks</title>
+  
   <style>
     :root {
-      --bg: #ffffff;    /* set to match homepage */
-      --brand: #0ea5e9; /* set to match homepage */
-      --text: #1f2937;
-      --card: #ffffff;
-      --muted: #6b7280;
-      --shadow: 0 10px 20px rgba(0,0,0,0.06), 0 2px 6px rgba(0,0,0,0.05);
-      --radius: 16px;
-      --maxw: 1100px;
+      --bg:#ffffff; --brand:#0ea5e9; --text:#1f2937; --card:#ffffff; --muted:#6b7280;
+      --shadow:0 10px 20px rgba(0,0,0,0.06),0 2px 6px rgba(0,0,0,0.05);
+      --radius:16px; --maxw:1100px;
     }
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color: var(--text); background: var(--bg); line-height: 1.55; }
-    header { background: #fff; box-shadow: var(--shadow); position: sticky; top: 0; z-index: 10; }
-    .nav { max-width: var(--maxw); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 20px; }
-    .brand { font-weight: 800; letter-spacing: 0.2px; }
-    nav a { text-decoration: none; color: var(--text); margin-left: 16px; padding: 8px 12px; border-radius: 999px; }
-    nav a:hover { background: #f1f5f9; }
-    .container { max-width: var(--maxw); margin: 32px auto; padding: 0 20px 48px; }
-    .banner-row { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 8px 0 24px; }
-    .banner { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 16px; border-radius: var(--radius); background: #f8fafc; box-shadow: var(--shadow); text-decoration: none; color: var(--text); }
-    .banner strong { font-weight: 800; }
-    .banner small { color: var(--muted); }
-    .featured { display: grid; grid-template-columns: 1fr; gap: 22px; background: var(--card); border-radius: calc(var(--radius) + 4px); padding: 18px; box-shadow: var(--shadow); margin-bottom: 28px; }
-    .featured img { width: 100%; height: auto; border-radius: var(--radius); display: block; }
-    .featured .content h2 { margin: 0 0 10px; font-size: clamp(22px, 2.5vw, 30px); }
-    .btn-row { display: flex; flex-wrap: wrap; gap: 10px; }
-    .btn { display: inline-block; padding: 10px 16px; border-radius: 999px; text-decoration: none; font-weight: 600; box-shadow: var(--shadow); transition: transform .05s ease; }
-    .btn:hover { transform: translateY(-1px); }
-    .btn-primary { background: var(--brand); color: #fff; }
-    .section-title { font-size: clamp(22px, 2.5vw, 32px); margin: 24px 0 12px; }
-    .grid { display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 18px; }
-    .card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; }
-    .card .img-wrap { display:block; }
-    .card img { width: 100%; height: auto; display: block; }
-    .card .body { padding: 14px; }
-    .card h3 { margin: 0 0 6px; font-size: 18px; }
-    .tag { display: inline-block; padding: 2px 8px; border-radius: 999px; background: #ecfeff; color: #0369a1; border: 1px solid #cffafe; font-size: 12px; margin-bottom: 8px; }
-    @media (min-width: 720px) { .featured { grid-template-columns: 380px 1fr; padding: 22px; } .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-    @media (min-width: 1024px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-    footer { margin-top: 36px; padding: 24px 0 48px; color: var(--muted); font-size: 14px; border-top: 1px solid #e5e7eb; text-align: center; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--text);background:var(--bg);line-height:1.55}
+    header{background:#fff;box-shadow:var(--shadow);position:sticky;top:0;z-index:10}
+    .nav{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 20px}
+    nav a{text-decoration:none;color:var(--text);margin-left:16px;padding:8px 12px;border-radius:999px}
+    nav a:hover{background:#f1f5f9}
+    .container{max-width:var(--maxw);margin:32px auto;padding:0 20px 48px}
+    .banner-row{display:grid;grid-template-columns:1fr;gap:12px;margin:8px 0 24px}
+    .banner{display:flex;align-items:center;justify-content:center;gap:12px;padding:16px;border-radius:var(--radius);background:#f8fafc;box-shadow:var(--shadow);text-decoration:none;color:var(--text)}
+    .banner strong{font-weight:800}
+    .banner small{color:var(--muted)}
+    .featured{display:grid;grid-template-columns:1fr;gap:22px;background:var(--card);border-radius:calc(var(--radius) + 4px);padding:18px;box-shadow:var(--shadow);margin-bottom:28px}
+    .featured img{width:100%;height:auto;border-radius:var(--radius);display:block}
+    .featured .content h2{margin:0 0 10px;font-size:clamp(22px,2.5vw,30px)}
+    .btn-row{display:flex;flex-wrap:wrap;gap:10px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:600;box-shadow:var(--shadow);transition:transform .05s ease}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:var(--brand);color:#fff}
+    .section-title{font-size:clamp(22px,2.5vw,32px);margin:24px 0 12px}
+    .grid{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:18px}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
+    .card .img-wrap{display:block}
+    .card img{width:100%;height:auto;display:block}
+    .card .body{padding:14px}
+    .card h3{margin:0 0 6px;font-size:18px}
+    .tag{display:inline-block;padding:2px 8px;border-radius:999px;background:#ecfeff;color:#0369a1;border:1px solid #cffafe;font-size:12px;margin-bottom:8px}
+    @media(min-width:720px){.featured{grid-template-columns:380px 1fr;padding:22px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(min-width:1024px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    footer{margin-top:36px;padding:24px 0 48px;color:var(--muted);font-size:14px;border-top:1px solid #e5e7eb;text-align:center}
   </style>
+
 </head>
 <body>
+  
   <header>
     <div class="nav">
-      <div class="brand">Gardening with Kev</div>
+      <div class="brand" style="font-weight:800;letter-spacing:.2px">Gardening with Kev</div>
       <nav>
         <a href="index.html">Home</a>
-        <a href="books.html" aria-current="page">Books & eBooks</a>
-        <a href="posts.html#medicinal-plants">Medicinal Plants</a>
+        <a href="books.html">Books & eBooks</a>
+        <a href="posts.html">Posts</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <!-- Text banners -->
     <div class="banner-row">
-      <a class="banner" href="https://www.amazon.com/hz/audible/mlp/membership/premiumplus/annual" target="_blank" rel="nofollow noopener sponsored"><strong>Audible</strong> <small>Listen to gardening & herbal titles</small></a>
-      <a class="banner" href="https://amzn.to/3VWAX3j" target="_blank" rel="nofollow noopener sponsored"><strong>Kindle Unlimited</strong> <small>Read thousands of books</small></a>
+      <a class="banner" href="https://amzn.to/4nZCO36" target="_blank" rel="nofollow noopener sponsored"><strong>Audible</strong> <small>Explore audiobooks and more</small></a>
+      <a class="banner" href="https://amzn.to/4nSRXDU" target="_blank" rel="nofollow noopener sponsored"><strong>Audible Premium Plus (Monthly)</strong> <small>Monthly membership details</small></a>
+      <a class="banner" href="https://amzn.to/4oxUOCr" target="_blank" rel="nofollow noopener sponsored"><strong>Kindle Unlimited</strong> <small>Read thousands of books</small></a>
     </div>
 
-    <!-- Featured eBook -->
     <section class="featured" id="featured-ebook">
       <img src="images/books/common-medicinal-plants-portland.jpg" alt="Common Medicinal Plants of Portland, Jamaica Paperback – March 1, 2010 cover" />
       <div class="content">
@@ -192,23 +188,18 @@
     </section>
   </main>
 
-  <!-- Footer CTA -->
   <section class="container" style="padding-top:0;">
     <div style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:16px;box-shadow: 0 10px 20px rgba(0,0,0,0.06), 0 2px 6px rgba(0,0,0,0.05);padding:20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;">
       <div style="font-size:clamp(18px,2.2vw,22px);font-weight:700;">Enjoying the content?</div>
-      <a href="https://www.youtube.com/@gardeningwithkev" target="_blank" rel="nofollow noopener" style="text-decoration:none;background:#0ea5e9;color:#fff;padding:10px 16px;border-radius:999px;font-weight:700;">
-        Visit Gardening with Kev on YouTube
-      </a>
+      <a href="https://www.youtube.com/@gardeningwithkev" target="_blank" rel="nofollow noopener" style="text-decoration:none;background:#0ea5e9;color:#fff;padding:10px 16px;border-radius:999px;font-weight:700;">Visit Gardening with Kev on YouTube</a>
     </div>
   </section>
 
-  <footer style="text-align:center;margin-top:16px;">
+  <footer>
     <div>Disclosure: As an Amazon Associate I earn from qualifying purchases. #ads</div>
     <div style="margin-top:6px;">© <span id="year"></span> Gardening with Kev</div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("year").textContent=new Date().getFullYear()</script>
 </body>
 </html>
