@@ -1,87 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Posts • Gardening with Kev</title>
-  
-  <style>
-    :root {
-      --bg:#ffffff; --brand:#0ea5e9; --text:#1f2937; --card:#ffffff; --muted:#6b7280;
-      --shadow:0 10px 20px rgba(0,0,0,0.06),0 2px 6px rgba(0,0,0,0.05);
-      --radius:16px; --maxw:1100px;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--text);background:var(--bg);line-height:1.55}
-    header{background:#fff;box-shadow:var(--shadow);position:sticky;top:0;z-index:10}
-    .nav{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 20px}
-    nav a{text-decoration:none;color:var(--text);margin-left:16px;padding:8px 12px;border-radius:999px}
-    nav a:hover{background:#f1f5f9}
-    .container{max-width:var(--maxw);margin:32px auto;padding:0 20px 48px}
-    .banner-row{display:grid;grid-template-columns:1fr;gap:12px;margin:8px 0 24px}
-    .banner{display:flex;align-items:center;justify-content:center;gap:12px;padding:16px;border-radius:var(--radius);background:#f8fafc;box-shadow:var(--shadow);text-decoration:none;color:var(--text)}
-    .banner strong{font-weight:800}
-    .banner small{color:var(--muted)}
-    .featured{display:grid;grid-template-columns:1fr;gap:22px;background:var(--card);border-radius:calc(var(--radius) + 4px);padding:18px;box-shadow:var(--shadow);margin-bottom:28px}
-    .featured img{width:100%;height:auto;border-radius:var(--radius);display:block}
-    .featured .content h2{margin:0 0 10px;font-size:clamp(22px,2.5vw,30px)}
-    .btn-row{display:flex;flex-wrap:wrap;gap:10px}
-    .btn{display:inline-block;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:600;box-shadow:var(--shadow);transition:transform .05s ease}
-    .btn:hover{transform:translateY(-1px)}
-    .btn-primary{background:var(--brand);color:#fff}
-    .section-title{font-size:clamp(22px,2.5vw,32px);margin:24px 0 12px}
-    .grid{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:18px}
-    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
-    .card .img-wrap{display:block}
-    .card img{width:100%;height:auto;display:block}
-    .card .body{padding:14px}
-    .card h3{margin:0 0 6px;font-size:18px}
-    .tag{display:inline-block;padding:2px 8px;border-radius:999px;background:#ecfeff;color:#0369a1;border:1px solid #cffafe;font-size:12px;margin-bottom:8px}
-    @media(min-width:720px){.featured{grid-template-columns:380px 1fr;padding:22px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(min-width:1024px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-    footer{margin-top:36px;padding:24px 0 48px;color:var(--muted);font-size:14px;border-top:1px solid #e5e7eb;text-align:center}
-  </style>
-
-</head>
-<body>
-  
-  <header>
-    <div class="nav">
-      <div class="brand" style="font-weight:800;letter-spacing:.2px">Gardening with Kev</div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="books.html">Books & eBooks</a>
-        <a href="posts.html">Posts</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <section id="medicinal-plants">
-      <h2 class="section-title">Medicinal Plants</h2>
-      <p class="muted">Short write‑ups linking to your WhatsApp/YouTube or full articles later.</p>
-      <div class="grid">
-        <article class="card">
-          <img src="images/books/healing-herbs-of-jamaica.jpg" alt="Aloe vera">
-          <div class="body">
-            <span class="tag">Medicinal</span>
-            <h3>Aloe Vera: quick care + basic uses</h3>
-            <p class="muted">Starter post — replace with your own image and content.</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="images/books/common-medicinal-plants-portland.jpg" alt="Fever grass">
-          <div class="body">
-            <span class="tag">Medicinal</span>
-            <h3>Fever Grass (Lemongrass): grow & brew</h3>
-            <p class="muted">Starter post — swap content when ready.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="home-gardening">
+<section id="home-gardening">
       <h2 class="section-title">Home Gardening</h2>
       <div class="grid">
         <article class="card">
@@ -92,13 +9,19 @@
             <p class="muted">Add a few steps and 2–3 photos.</p>
           </div>
         </article>
-      </div>
+      
+        <!-- ⭐ NEW Seed Info Post Card ⭐ -->
+        <article class="card">
+          <a class="img-wrap" href="seed-info.html">
+            <img src="images/seed-packet-with-date.jpg" alt="Seed packet information">
+          </a>
+          <div class="body">
+            <span class="tag">How-to</span>
+            <h3><a href="seed-info.html" style="text-decoration:none;color:inherit;">
+              Wondering Why Your Seeds Didn’t Grow?
+            </a></h3>
+            <p class="muted">Check seed dates, germination tips, and troubleshooting advice.</p>
+          </div>
+        </article>
+</div>
     </section>
-  </main>
-  <footer>
-    <div>Disclosure: As an Amazon Associate I earn from qualifying purchases. #ads</div>
-    <div style="margin-top:6px;">© <span id="year"></span> Gardening with Kev</div>
-  </footer>
-  <script>document.getElementById("year").textContent=new Date().getFullYear()</script>
-</body>
-</html>
