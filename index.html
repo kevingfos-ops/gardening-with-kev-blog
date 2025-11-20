@@ -154,7 +154,13 @@
     @media (max-width:880px){
       .site-banner{height:220px}
     }
-  </style>
+  
+    .banner-row{display:grid;grid-template-columns:1fr;gap:12px;margin:8px 0 24px}
+    .banner{display:flex;align-items:center;justify-content:center;gap:12px;padding:16px;border-radius:16px;background:#f8fafc;box-shadow:0 10px 20px rgba(0,0,0,0.06),0 2px 6px rgba(0,0,0,0.05);text-decoration:none;color:var(--text)}
+    .banner strong{font-weight:800}
+    .banner small{color:#6b7280}
+    .disclosure-mini{font-size:11px;color:#6b7280;margin-top:4px;text-align:center;}
+</style>
 <!-- End: Styles -->
 </head>
 <body>
@@ -181,14 +187,14 @@
 <div class="site-banner__overlay"></div>
 <div class="site-banner__text">Simple, natural gardening inspired by Jamaica 🌴</div>
 </section>
-<div style="text-align:center; margin:20px 0;">
-<a href="https://www.amazon.com/prime?tag=gardening00d9-20" rel="noopener" target="_blank">
-<img alt="Join Amazon Prime" src="https://m.media-amazon.com/images/G/01/AdvertisingSite/US/img/Prime/XCM_Manual_1231174_1141743_US_us_prime_generic_300x250_3755291915._CB589429489_.png" style="max-width:100%; height:auto; border-radius:8px;"/>
+<section class="banner-row">
+<a class="banner" href="https://www.amazon.com/prime?tag=gardening00d9-20" rel="nofollow noopener sponsored" target="_blank">
+<strong>Amazon Prime</strong>
+<small>Fast delivery, movies, music &amp; more</small>
 </a>
-<div style="font-size:12px; color:#666; margin-top:4px;">
-    click on the link and check out these products<br/>
-<em>Disclosure: As an Amazon Associate I earn from qualifying purchases.</em>
-</div>
+</section>
+<div class="disclosure-mini">
+  Disclosure: As an Amazon Associate I earn from qualifying purchases. #ads
 </div>
 
 <!-- End: Banner -->
