@@ -1,13 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Books & eBooks</title>
-  
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Books &amp; eBooks</title>
+<style>
     :root {
-      --bg:#ffffff; --brand:#0ea5e9; --text:#1f2937; --card:#ffffff; --muted:#6b7280;
+      --bg:#f7f7f8; --brand:#2b6cb0; --text:#111; --card:#ffffff; --muted:#6b7280;
       --shadow:0 10px 20px rgba(0,0,0,0.06),0 2px 6px rgba(0,0,0,0.05);
       --radius:16px; --maxw:1100px;
     }
@@ -20,186 +20,159 @@
     .container{max-width:var(--maxw);margin:32px auto;padding:0 20px 48px}
     .banner-row{display:grid;grid-template-columns:1fr;gap:12px;margin:8px 0 24px}
     .banner{display:flex;align-items:center;justify-content:center;gap:12px;padding:16px;border-radius:var(--radius);background:#f8fafc;box-shadow:var(--shadow);text-decoration:none;color:var(--text)}
-    .banner strong{font-weight:800}
-    .banner small{color:var(--muted)}
+    .banner strong{font-weight:800} .banner small{color:var(--muted)}
     .featured{display:grid;grid-template-columns:1fr;gap:22px;background:var(--card);border-radius:calc(var(--radius) + 4px);padding:18px;box-shadow:var(--shadow);margin-bottom:28px}
     .featured img{width:100%;height:auto;border-radius:var(--radius);display:block}
     .featured .content h2{margin:0 0 10px;font-size:clamp(22px,2.5vw,30px)}
-    .btn-row{display:flex;flex-wrap:wrap;gap:10px}
-    .btn{display:inline-block;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:600;box-shadow:var(--shadow);transition:transform .05s ease}
-    .btn:hover{transform:translateY(-1px)}
-    .btn-primary{background:var(--brand);color:#fff}
+    .btn-row{display:flex;flex-wrap:wrap;gap:10px} .btn{display:inline-block;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:600;box-shadow:var(--shadow);transition:transform .05s ease}
+    .btn:hover{transform:translateY(-1px)} .btn-primary{background:var(--brand);color:#fff}
     .section-title{font-size:clamp(22px,2.5vw,32px);margin:24px 0 12px}
     .grid{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:18px}
     .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
-    .card .img-wrap{display:block}
-    .card img{width:100%;height:auto;display:block}
-    .card .body{padding:14px}
+    .card .img-wrap{display:block} .card img{width:100%;height:auto;display:block} .card .body{padding:14px}
     .card h3{margin:0 0 6px;font-size:18px}
     .tag{display:inline-block;padding:2px 8px;border-radius:999px;background:#ecfeff;color:#0369a1;border:1px solid #cffafe;font-size:12px;margin-bottom:8px}
     @media(min-width:720px){.featured{grid-template-columns:380px 1fr;padding:22px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(min-width:1024px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
     footer{margin-top:36px;padding:24px 0 48px;color:var(--muted);font-size:14px;border-top:1px solid #e5e7eb;text-align:center}
   </style>
-
-</head>
+<style>.disclosure-mini{font-size:11px;color:#6b7280;margin-top:4px;}</style></head>
 <body>
-  
-  <header>
-    <div class="nav">
-      <div class="brand" style="font-weight:800;letter-spacing:.2px">Gardening with Kev</div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="books.html">Books & eBooks</a>
-        <a href="posts.html">Posts</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <div class="banner-row">
-      <a class="banner" href="https://amzn.to/4nZCO36" target="_blank" rel="nofollow noopener sponsored"><strong>Audible</strong> <small>Explore audiobooks and more</small></a>
-      <a class="banner" href="https://amzn.to/4nSRXDU" target="_blank" rel="nofollow noopener sponsored"><strong>Audible Premium Plus (Monthly)</strong> <small>Monthly membership details</small></a>
-      <a class="banner" href="https://amzn.to/4oxUOCr" target="_blank" rel="nofollow noopener sponsored"><strong>Kindle Unlimited</strong> <small>Read thousands of books</small></a>
-    </div>
-
-    <section class="featured" id="featured-ebook">
-      <img src="images/books/common-medicinal-plants-portland.jpg" alt="Common Medicinal Plants of Portland, Jamaica Paperback – March 1, 2010 cover" />
-      <div class="content">
-        <h2>Featured eBook</h2>
-        <p>Common Medicinal Plants of Portland, Jamaica Paperback – March 1, 2010</p>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="https://amzn.to/4oGCEyz" target="_blank" rel="nofollow noopener sponsored">Buy on Amazon</a>
-          <a class="btn" href="#medicinal-plants">See Medicinal Plants</a>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2 class="section-title">MAIN Gardening Books</h2>
-      <div class="grid">
-        <article class="card" data-title="Gardening the Tropics: : Florida & Caribbean Fruits, Vegetables, and Traditions Kindle Edition" data-url="https://amzn.to/49PMUQi">
-          <a class="img-wrap" href="https://amzn.to/49PMUQi" target="_blank" rel="nofollow noopener sponsored">
-            <img src="images/books/gardening-the-tropics.jpg" alt="Gardening the Tropics: : Florida & Caribbean Fruits, Vegetables, and Traditions Kindle Edition cover" loading="lazy" />
-          </a>
-          <div class="body">
-            <span class="tag">Book</span>
-            <h3>Gardening the Tropics: : Florida & Caribbean Fruits, Vegetables, and Traditions Kindle Edition</h3>
-            <a class="btn btn-primary" href="https://amzn.to/49PMUQi" target="_blank" rel="nofollow noopener sponsored">View on Amazon</a>
-          </div>
-        </article>
-
-        <article class="card" data-title="Gardening in the Caribbean Paperback" data-url="https://amzn.to/3WMVQyk">
-          <a class="img-wrap" href="https://amzn.to/3WMVQyk" target="_blank" rel="nofollow noopener sponsored">
-            <img src="images/books/gardening-in-the-caribbean.jpg" alt="Gardening in the Caribbean Paperback cover" loading="lazy" />
-          </a>
-          <div class="body">
-            <span class="tag">Book</span>
-            <h3>Gardening in the Caribbean Paperback</h3>
-            <a class="btn btn-primary" href="https://amzn.to/3WMVQyk" target="_blank" rel="nofollow noopener sponsored">View on Amazon</a>
-          </div>
-        </article>
-
-        <article class="card" data-title="The Caribbean Home Garden Guide" data-url="https://amzn.to/482SWfc">
-          <a class="img-wrap" href="https://amzn.to/482SWfc" target="_blank" rel="nofollow noopener sponsored">
-            <img src="images/books/the-caribbean-home-garden-guide.jpg" alt="The Caribbean Home Garden Guide cover" loading="lazy" />
-          </a>
-          <div class="body">
-            <span class="tag">Book</span>
-            <h3>The Caribbean Home Garden Guide</h3>
-            <a class="btn btn-primary" href="https://amzn.to/482SWfc" target="_blank" rel="nofollow noopener sponsored">View on Amazon</a>
-          </div>
-        </article>
-
-        <article class="card" data-title="Container Gardening for the Caribbean and the Tropics (Caribbean Pocket Natural History Series) Paperback – February 1, 1999" data-url="https://amzn.to/4owWEn6">
-          <a class="img-wrap" href="https://amzn.to/4owWEn6" target="_blank" rel="nofollow noopener sponsored">
-            <img src="images/books/container-gardening-caribbean.jpg" alt="Container Gardening for the Caribbean and the Tropics (Caribbean Pocket Natural History Series) Paperback – February 1, 1999 cover" loading="lazy" />
-          </a>
-          <div class="body">
-            <span class="tag">Book</span>
-            <h3>Container Gardening for the Caribbean and the Tropics (Caribbean Pocket Natural History Series) Paperback – February 1, 1999</h3>
-            <a class="btn btn-primary" href="https://amzn.to/4owWEn6" target="_blank" rel="nofollow noopener sponsored">View on Amazon</a>
-          </div>
-        </article></div>
-    </section>
-
-    <section>
-      <h2 class="section-title">Caribbean / Tropical Gardening & Herbal Books</h2>
-      <div class="grid">
-        <article class="card" data-title="Edible and poisonous plants of the Caribbean region Hardcover – January 1, 2013" data-url="https://amzn.to/4ovNF5B">
-          <a class="img-wrap" href="https://amzn.to/4ovNF5B" target="_blank" rel="nofollow noopener sponsored">
-            <img src="images/books/edible-and-poisonous-plants-caribbean.jpg" alt="Edible and poisonous plants of the Caribbean region Hardcover – January 1, 2013 cover" loading="lazy" />
-          </a>
-          <div class="body">
-            <span class="tag">Regional</span>
-            <h3>Edible and poisonous plants of the Caribbean region Hardcover – January 1, 2013</h3>
-            <a class="btn btn-primary" href="https://amzn.to/4ovNF5B" target="_blank" rel="nofollow noopener sponsored">View on Amazon</a>
-          </div>
-        </article></div>
-    </section>
-
-    <section id="medicinal-plants">
-      <h2 class="section-title">Medicinal / Herbal / Healing Plants eBooks</h2>
-      <div class="grid">
-        <article class="card" data-title="Common Medicinal Plants of Portland, Jamaica Paperback – March 1, 2010" data-url="https://amzn.to/4oGCEyz">
-          <a class="img-wrap" href="https://amzn.to/4oGCEyz" target="_blank" rel="nofollow noopener sponsored">
-            <img src="images/books/common-medicinal-plants-portland.jpg" alt="Common Medicinal Plants of Portland, Jamaica Paperback – March 1, 2010 cover" loading="lazy" />
-          </a>
-          <div class="body">
-            <span class="tag">Herbal / eBook</span>
-            <h3>Common Medicinal Plants of Portland, Jamaica Paperback – March 1, 2010</h3>
-            <a class="btn btn-primary" href="https://amzn.to/4oGCEyz" target="_blank" rel="nofollow noopener sponsored">View on Amazon</a>
-          </div>
-        </article>
-
-        <article class="card" data-title="Healing Herbs of Jamaica Paperback – January 1, 2021" data-url="https://amzn.to/3LtD4cZ">
-          <a class="img-wrap" href="https://amzn.to/3LtD4cZ" target="_blank" rel="nofollow noopener sponsored">
-            <img src="images/books/healing-herbs-of-jamaica.jpg" alt="Healing Herbs of Jamaica Paperback – January 1, 2021 cover" loading="lazy" />
-          </a>
-          <div class="body">
-            <span class="tag">Herbal / eBook</span>
-            <h3>Healing Herbs of Jamaica Paperback – January 1, 2021</h3>
-            <a class="btn btn-primary" href="https://amzn.to/3LtD4cZ" target="_blank" rel="nofollow noopener sponsored">View on Amazon</a>
-          </div>
-        </article>
-
-        <article class="card" data-title="THE HEALING HERBS OF THE CARIBBEAN AND BEYOND (CARIBBEAN HERBS)" data-url="https://amzn.to/47JuXjN">
-          <a class="img-wrap" href="https://amzn.to/47JuXjN" target="_blank" rel="nofollow noopener sponsored">
-            <img src="images/books/healing-herbs-of-the-caribbean-and-beyond.jpg" alt="THE HEALING HERBS OF THE CARIBBEAN AND BEYOND (CARIBBEAN HERBS) cover" loading="lazy" />
-          </a>
-          <div class="body">
-            <span class="tag">Herbal / eBook</span>
-            <h3>THE HEALING HERBS OF THE CARIBBEAN AND BEYOND (CARIBBEAN HERBS)</h3>
-            <a class="btn btn-primary" href="https://amzn.to/47JuXjN" target="_blank" rel="nofollow noopener sponsored">View on Amazon</a>
-          </div>
-        </article>
-
-        <article class="card" data-title="THE COMPLETE JAMAICAN HERBAL REMEDY GUIDE: Ancient Remedies, Detox Recipes, and Natural Solutions for Common Ailments and Vibrant Health Kindle Edition" data-url="https://amzn.to/4qMDWcZ">
-          <a class="img-wrap" href="https://amzn.to/4qMDWcZ" target="_blank" rel="nofollow noopener sponsored">
-            <img src="images/books/jamaican-herbal-remedy-guide.jpg" alt="THE COMPLETE JAMAICAN HERBAL REMEDY GUIDE: Ancient Remedies, Detox Recipes, and Natural Solutions for Common Ailments and Vibrant Health Kindle Edition cover" loading="lazy" />
-          </a>
-          <div class="body">
-            <span class="tag">Herbal / eBook</span>
-            <h3>THE COMPLETE JAMAICAN HERBAL REMEDY GUIDE: Ancient Remedies, Detox Recipes, and Natural Solutions for Common Ailments and Vibrant Health Kindle Edition</h3>
-            <a class="btn btn-primary" href="https://amzn.to/4qMDWcZ" target="_blank" rel="nofollow noopener sponsored">View on Amazon</a>
-          </div>
-        </article></div>
-    </section>
-  </main>
-
-  <section class="container" style="padding-top:0;">
-    <div style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:16px;box-shadow: 0 10px 20px rgba(0,0,0,0.06), 0 2px 6px rgba(0,0,0,0.05);padding:20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;">
-      <div style="font-size:clamp(18px,2.2vw,22px);font-weight:700;">Enjoying the content?</div>
-      <a href="https://www.youtube.com/@gardeningwithkev" target="_blank" rel="nofollow noopener" style="text-decoration:none;background:#0ea5e9;color:#fff;padding:10px 16px;border-radius:999px;font-weight:700;">Visit Gardening with Kev on YouTube</a>
-    </div>
-  </section>
-
-  <footer>
-    <div>Disclosure: As an Amazon Associate I earn from qualifying purchases. #ads</div>
-    <div style="margin-top:6px;">© <span id="year"></span> Gardening with Kev</div>
-  </footer>
-
-  <script>document.getElementById("year").textContent=new Date().getFullYear()</script>
+<header>
+<div class="nav">
+<div class="brand" style="font-weight:800;letter-spacing:.2px">Gardening with Kev</div>
+<nav>
+<a href="index.html">Home</a>
+<a aria-current="page" href="books.html">Books &amp; eBooks</a>
+<a href="posts.html#medicinal-plants">Posts</a>
+<a href="contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="container">
+<div class="banner-row">
+<a class="banner" href="https://amzn.to/4nZCO36" rel="nofollow noopener sponsored" target="_blank"><strong>Audible</strong> <small>Explore audiobooks and more</small></a>
+<a class="banner" href="https://amzn.to/4nSRXDU" rel="nofollow noopener sponsored" target="_blank"><strong>Audible Premium Plus (Monthly)</strong> <small>Membership details</small></a>
+<a class="banner" href="https://amzn.to/4oxUOCr" rel="nofollow noopener sponsored" target="_blank"><strong>Kindle Unlimited</strong> <small>Read thousands of books</small></a>
+</div>
+<section class="featured" id="featured-ebook">
+<img alt="Common Medicinal Plants of Portland, Jamaica Paperback – March 1, 2010 cover" src="images/books/common-medicinal-plants-portland.jpg"/>
+<div class="content">
+<h2>Featured eBook</h2>
+<p>Common Medicinal Plants of Portland, Jamaica Paperback – March 1, 2010</p>
+<div class="btn-row">
+<a class="btn btn-primary" href="https://amzn.to/4oGCEyz" rel="nofollow noopener sponsored" target="_blank">Buy on Amazon</a><div class="disclosure-mini">Disclosure: As an Amazon Associate I earn from qualifying purchases. #ads</div>
+<a class="btn" href="#medicinal-plants">See Medicinal Plants</a>
+</div>
+</div>
+</section>
+<section>
+<h2 class="section-title">MAIN Gardening Books</h2>
+<div class="grid">
+<article class="card" data-title="Gardening the Tropics: : Florida &amp; Caribbean Fruits, Vegetables, and Traditions Kindle Edition" data-url="https://amzn.to/49PMUQi">
+<a class="img-wrap" href="https://amzn.to/49PMUQi" rel="nofollow noopener sponsored" target="_blank">
+<img alt="Gardening the Tropics: : Florida &amp; Caribbean Fruits, Vegetables, and Traditions Kindle Edition cover" loading="lazy" src="images/books/gardening-the-tropics.jpg"/>
+</a>
+<div class="body">
+<span class="tag">Book</span>
+<h3>Gardening the Tropics: : Florida &amp; Caribbean Fruits, Vegetables, and Traditions Kindle Edition</h3>
+<a class="btn btn-primary" href="https://amzn.to/49PMUQi" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a><div class="disclosure-mini">Disclosure: As an Amazon Associate I earn from qualifying purchases. #ads</div>
+</div>
+</article>
+<article class="card" data-title="Gardening in the Caribbean Paperback" data-url="https://amzn.to/3WMVQyk">
+<a class="img-wrap" href="https://amzn.to/3WMVQyk" rel="nofollow noopener sponsored" target="_blank">
+<img alt="Gardening in the Caribbean Paperback cover" loading="lazy" src="images/books/gardening-in-the-caribbean.jpg"/>
+</a>
+<div class="body">
+<span class="tag">Book</span>
+<h3>Gardening in the Caribbean Paperback</h3>
+<a class="btn btn-primary" href="https://amzn.to/3WMVQyk" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a><div class="disclosure-mini">Disclosure: As an Amazon Associate I earn from qualifying purchases. #ads</div>
+</div>
+</article>
+<article class="card" data-title="The Caribbean Home Garden Guide" data-url="https://amzn.to/482SWfc">
+<a class="img-wrap" href="https://amzn.to/482SWfc" rel="nofollow noopener sponsored" target="_blank">
+<img alt="The Caribbean Home Garden Guide cover" loading="lazy" src="images/books/the-caribbean-home-garden-guide.jpg"/>
+</a>
+<div class="body">
+<span class="tag">Book</span>
+<h3>The Caribbean Home Garden Guide</h3>
+<a class="btn btn-primary" href="https://amzn.to/482SWfc" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a><div class="disclosure-mini">Disclosure: As an Amazon Associate I earn from qualifying purchases. #ads</div>
+</div>
+</article>
+<article class="card" data-title="Container Gardening for the Caribbean and the Tropics (Caribbean Pocket Natural History Series) Paperback – February 1, 1999" data-url="https://amzn.to/4owWEn6">
+<a class="img-wrap" href="https://amzn.to/4owWEn6" rel="nofollow noopener sponsored" target="_blank">
+<img alt="Container Gardening for the Caribbean and the Tropics (Caribbean Pocket Natural History Series) Paperback – February 1, 1999 cover" loading="lazy" src="images/books/container-gardening-caribbean.jpg"/>
+</a>
+<div class="body">
+<span class="tag">Book</span>
+<h3>Container Gardening for the Caribbean and the Tropics (Caribbean Pocket Natural History Series) Paperback – February 1, 1999</h3>
+<a class="btn btn-primary" href="https://amzn.to/4owWEn6" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a><div class="disclosure-mini">Disclosure: As an Amazon Associate I earn from qualifying purchases. #ads</div>
+</div>
+</article></div>
+</section>
+<section>
+<h2 class="section-title">Caribbean / Tropical Gardening &amp; Herbal Books</h2>
+<div class="grid">
+<article class="card" data-title="Edible and poisonous plants of the Caribbean region Hardcover – January 1, 2013" data-url="https://amzn.to/4ovNF5B">
+<a class="img-wrap" href="https://amzn.to/4ovNF5B" rel="nofollow noopener sponsored" target="_blank">
+<img alt="Edible and poisonous plants of the Caribbean region Hardcover – January 1, 2013 cover" loading="lazy" src="images/books/edible-and-poisonous-plants-caribbean.jpg"/>
+</a>
+<div class="body">
+<span class="tag">Regional</span>
+<h3>Edible and poisonous plants of the Caribbean region Hardcover – January 1, 2013</h3>
+<a class="btn btn-primary" href="https://amzn.to/4ovNF5B" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a><div class="disclosure-mini">Disclosure: As an Amazon Associate I earn from qualifying purchases. #ads</div>
+</div>
+</article></div>
+</section>
+<section id="medicinal-plants">
+<h2 class="section-title">Medicinal / Herbal / Healing Plants eBooks</h2>
+<div class="grid">
+<article class="card" data-title="Common Medicinal Plants of Portland, Jamaica Paperback – March 1, 2010" data-url="https://amzn.to/4oGCEyz">
+<a class="img-wrap" href="https://amzn.to/4oGCEyz" rel="nofollow noopener sponsored" target="_blank">
+<img alt="Common Medicinal Plants of Portland, Jamaica Paperback – March 1, 2010 cover" loading="lazy" src="images/books/common-medicinal-plants-portland.jpg"/>
+</a>
+<div class="body">
+<span class="tag">Herbal / eBook</span>
+<h3>Common Medicinal Plants of Portland, Jamaica Paperback – March 1, 2010</h3>
+<a class="btn btn-primary" href="https://amzn.to/4oGCEyz" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a><div class="disclosure-mini">Disclosure: As an Amazon Associate I earn from qualifying purchases. #ads</div>
+</div>
+</article>
+<article class="card" data-title="Healing Herbs of Jamaica Paperback – January 1, 2021" data-url="https://amzn.to/3LtD4cZ">
+<a class="img-wrap" href="https://amzn.to/3LtD4cZ" rel="nofollow noopener sponsored" target="_blank">
+<img alt="Healing Herbs of Jamaica Paperback – January 1, 2021 cover" loading="lazy" src="images/books/healing-herbs-of-jamaica.jpg"/>
+</a>
+<div class="body">
+<span class="tag">Herbal / eBook</span>
+<h3>Healing Herbs of Jamaica Paperback – January 1, 2021</h3>
+<a class="btn btn-primary" href="https://amzn.to/3LtD4cZ" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a><div class="disclosure-mini">Disclosure: As an Amazon Associate I earn from qualifying purchases. #ads</div>
+</div>
+</article>
+<article class="card" data-title="THE HEALING HERBS OF THE CARIBBEAN AND BEYOND (CARIBBEAN HERBS)" data-url="https://amzn.to/47JuXjN">
+<a class="img-wrap" href="https://amzn.to/47JuXjN" rel="nofollow noopener sponsored" target="_blank">
+<img alt="THE HEALING HERBS OF THE CARIBBEAN AND BEYOND (CARIBBEAN HERBS) cover" loading="lazy" src="images/books/healing-herbs-of-the-caribbean-and-beyond.jpg"/>
+</a>
+<div class="body">
+<span class="tag">Herbal / eBook</span>
+<h3>THE HEALING HERBS OF THE CARIBBEAN AND BEYOND (CARIBBEAN HERBS)</h3>
+<a class="btn btn-primary" href="https://amzn.to/47JuXjN" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a><div class="disclosure-mini">Disclosure: As an Amazon Associate I earn from qualifying purchases. #ads</div>
+</div>
+</article>
+<article class="card" data-title="THE COMPLETE JAMAICAN HERBAL REMEDY GUIDE: Ancient Remedies, Detox Recipes, and Natural Solutions for Common Ailments and Vibrant Health Kindle Edition" data-url="https://amzn.to/4qMDWcZ">
+<a class="img-wrap" href="https://amzn.to/4qMDWcZ" rel="nofollow noopener sponsored" target="_blank">
+<img alt="THE COMPLETE JAMAICAN HERBAL REMEDY GUIDE: Ancient Remedies, Detox Recipes, and Natural Solutions for Common Ailments and Vibrant Health Kindle Edition cover" loading="lazy" src="images/books/jamaican-herbal-remedy-guide.jpg"/>
+</a>
+<div class="body">
+<span class="tag">Herbal / eBook</span>
+<h3>THE COMPLETE JAMAICAN HERBAL REMEDY GUIDE: Ancient Remedies, Detox Recipes, and Natural Solutions for Common Ailments and Vibrant Health Kindle Edition</h3>
+<a class="btn btn-primary" href="https://amzn.to/4qMDWcZ" rel="nofollow noopener sponsored" target="_blank">View on Amazon</a><div class="disclosure-mini">Disclosure: As an Amazon Associate I earn from qualifying purchases. #ads</div>
+</div>
+</article></div>
+</section>
+</main>
+<footer>
+<div>Disclosure: As an Amazon Associate I earn from qualifying purchases. #ads</div>
+<div style="margin-top:6px;">© <span id="year"></span> Gardening with Kev</div>
+</footer>
+<script>document.getElementById("year").textContent=new Date().getFullYear()</script>
 </body>
 </html>
