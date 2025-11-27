@@ -70,15 +70,12 @@
       var decoded = decodeURIComponent(target);
       var link = document.getElementById('fallback-link');
       link.href = decoded;
-
-      // Track as an outbound click event in GA4
       try {
         gtag('event', 'amazon_click', {
           'event_category': 'outbound',
           'event_label': decoded
         });
       } catch(e) {}
-
       setTimeout(function(){
         window.location.href = decoded;
       }, 800);
