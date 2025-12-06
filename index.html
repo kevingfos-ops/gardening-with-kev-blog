@@ -48,12 +48,15 @@
     a{text-decoration:none;color:var(--accent)}
     header{display:flex;align-items:center;justify-content:space-between;gap:12px}
     .brand{display:flex;align-items:center;gap:12px}
+
+    /* Updated logo size */
     .logo{
-      width:64px;
+      width:80px;
       height:auto;
       border-radius:999px;
       display:block;
     }
+
     .tagline{color:#2f6e3f;font-size:13px;margin-top:2px}
     nav a{margin-left:12px;color:var(--muted)}
     nav a:hover{color:#000}
@@ -127,7 +130,7 @@
     footer{
       margin:28px 0;
       text-align:center;
-      color:var(--muted);
+      color:#666;
       font-size:14px;
     }
     @media (max-width:880px){
@@ -209,6 +212,7 @@
           <div class="tagline">Simple, natural gardening inspired by Jamaica</div>
         </div>
       </div>
+
       <nav>
         <a href="#top">Home</a>
         <a href="#posts">Posts</a>
@@ -218,13 +222,7 @@
     </header>
     <!-- End: Header -->
 
-    <!-- Start: Logo Above Banner -->
-    <div style="text-align:center; margin: 20px 0 10px 0;">
-      <img src="gwk-logo.png"
-           alt="Gardening With Kev Logo"
-           style="width:220px; height:auto; border-radius:999px;">
-    </div>
-    <!-- End: Logo Above Banner -->
+    <!-- BIG LOGO ABOVE BANNER REMOVED -->
 
     <!-- Start: Banner -->
     <section class="site-banner" role="img" aria-label="Jamaican hillside with lush greenery">
@@ -250,89 +248,57 @@
     <main class="hero">
       <!-- Start: Posts -->
       <section id="posts">
-        <!-- Aloe Vera Preview -->
+
+        <!-- Aloe preview -->
         <article class="card post">
           <h2>🌿 Aloe Vera: The Healing Plant Every Home Should Have</h2>
           <div class="date">Posted October 2025</div>
-          <img src="images/aloe-vera.jpg" class="main" alt="Aloe Vera plant at home">
-          <p>
-            Aloe Vera is one of the most useful and low-maintenance plants you can grow at home.
-            It’s a natural first aid kit, a beauty treatment, and an important part of traditional
-            Jamaican remedies.
-          </p>
-          <p>
-            <a class="btn" href="aloe-vera.html">Read the full Aloe guide</a>
-          </p>
+          <img src="images/aloe-vera.jpg" class="main" alt="Aloe Vera plant">
+          <p>Aloe Vera is one of the most useful and low-maintenance plants...</p>
+          <p><a class="btn" href="aloe-vera.html">Read the full Aloe guide</a></p>
         </article>
 
-        <!-- Life Plant Preview -->
+        <!-- Life Plant -->
         <article class="card post">
           <h2>🌿 The Life Plant and Its Healing Power</h2>
           <div class="date">Posted October 2025</div>
-          <img src="images/life-plant.jpg" class="main" alt="Life plant (Kalanchoe pinnata) in a pot">
-          <p>
-            The Life Plant, also called Wonder of the World, is a beloved medicinal plant across the
-            Caribbean. It’s tough, easy to grow, and often used in home herbal remedies.
-          </p>
-          <p>
-            <a class="btn" href="life-plant.html">Read the full Life Plant guide</a>
-          </p>
+          <img src="images/life-plant.jpg" class="main" alt="Life plant">
+          <p>The Life Plant, also called Wonder of the World...</p>
+          <p><a class="btn" href="life-plant.html">Read the full Life Plant guide</a></p>
         </article>
 
-        <!-- Pineapple Post (already separate page) -->
+        <!-- Pineapple -->
         <article class="card post">
           <h2>🍍 How I Planted Pineapples at Home</h2>
           <div class="date">Posted November 2025</div>
-          <img src="Pineapple from tops planted in full sun.jpg" class="main" alt="Pineapple plants growing in full sun">
-          <p>
-            I planted pineapples using tops from market fruits and pups from an existing plant.
-            In this post I share how I rooted the tops in water, planted them in sun and shade,
-            and how they’re growing so far.
-          </p>
-          <p>
-            <a href="pineapple.html"
-               style="display:inline-block;padding:10px 14px;border-radius:8px;
-                      background:#2b6cb0;color:#fff;text-decoration:none;font-weight:600;">
-              Read the full pineapple guide
-            </a>
-          </p>
+          <img src="Pineapple from tops planted in full sun.jpg" class="main" alt="Pineapple plants">
+          <p>I planted pineapples using tops from market fruits...</p>
+          <p><a class="btn" href="pineapple.html">Read the full pineapple guide</a></p>
         </article>
 
-        <!-- Planting in Containers Preview -->
+        <!-- Containers -->
         <article class="card post">
           <h2>🌱 Planting in Containers</h2>
           <div class="date">Posted October 2025</div>
-          <img src="images/container-01.jpg" class="main" alt="Plants growing in a reused plastic bottle">
-          <p>
-            At home, I’ve planted flowers, fever grass, aloe vera and other plants in all kinds of
-            containers — water bottles, buckets, tins, even old paint pans. Plants don’t care how the
-            pot looks, once they have soil, water and light.
-          </p>
-          <p>
-            <a class="btn" href="planting-in-containers.html">Read the full containers guide</a>
-          </p>
+          <img src="images/container-01.jpg" class="main" alt="Plants in reused bottle">
+          <p>At home, I’ve planted flowers, fever grass, aloe vera and more in simple containers...</p>
+          <p><a class="btn" href="planting-in-containers.html">Read the full containers guide</a></p>
         </article>
 
-        <!-- Seed Info Post -->
+        <!-- Seeds -->
         <article class="card post">
           <h2>🌱 Wondering Why Your Seeds Didn’t Grow?</h2>
           <div class="date">Posted November 2025</div>
-          <img src="images/seed-packet-with-date.jpg" class="main" alt="Seed packet showing date example">
-          <p>
-            You planted your seeds, watered them, waited... and nothing came up.
-            Before you blame your “bad hands,” it may be the seeds, how they were stored,
-            or a few simple planting mistakes. Click below to learn what to check.
-          </p>
-          <p>
-            <a class="btn" href="seed-info.html">Read the full seed guide</a>
-          </p>
+          <img src="images/seed-packet-with-date.jpg" class="main" alt="Seed packet">
+          <p>You planted your seeds, watered them, waited... and nothing came up...</p>
+          <p><a class="btn" href="seed-info.html">Read the full seed guide</a></p>
         </article>
+
       </section>
       <!-- End: Posts -->
 
       <!-- Start: Sidebar -->
       <aside>
-        <!-- About Kevin -->
         <div class="card about" id="contact">
           <img src="images/kev-circle.png" alt="Kevin portrait">
           <div>
@@ -342,84 +308,71 @@
           </div>
         </div>
 
-        <!-- Follow on YouTube -->
+        <!-- YouTube -->
         <div class="card sidebar-section">
           <h4>Follow on YouTube</h4>
           <iframe class="yt-embed"
             src="https://www.youtube.com/embed/APF2cXIATJc?start=40"
-            title="Gardening With Kev YouTube Video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-          <a class="btn btn-yt" href="https://www.youtube.com/@gardeningwithkev" target="_blank" rel="noopener">
-            Visit my YouTube
-          </a>
+            allowfullscreen></iframe>
+          <a class="btn btn-yt" href="https://www.youtube.com/@gardeningwithkev" target="_blank">Visit my YouTube</a>
         </div>
 
-        <!-- Contact via Linktree -->
+        <!-- Linktree -->
         <div class="card sidebar-section">
           <h4>Contact Kevin</h4>
-          <a class="btn btn-linktree" href="https://linktr.ee/kevingfos" target="_blank" rel="noopener">
-            Message me on Linktree
-          </a>
+          <a class="btn btn-linktree" href="https://linktr.ee/kevingfos" target="_blank">Message me on Linktree</a>
         </div>
 
-        <!-- Featured Amazon Products -->
+        <!-- Amazon -->
         <div class="card sidebar-section">
-          <h4>🌿 Featured Products &amp; Tools</h4>
-          <p style="font-size:12px;color:#666;margin-top:4px">
-            Some of the links below are affiliate links. As an Amazon Associate I earn from qualifying purchases.
-          </p>
+          <h4>🌿 Featured Products & Tools</h4>
+          <p style="font-size:12px;color:#666;">Some links below are affiliate links.</p>
 
           <div class="amazon-prod">
-            <img src="images/fiskars-shears.jpg" alt="Fiskars Bypass Pruning Shears">
+            <img src="images/fiskars-shears.jpg" alt="">
             <div>
-              <strong>Fiskars Bypass Pruning Shears</strong><br>
-              Ideal for clean cuts on live plants<br>
+              <strong>Fiskars Pruning Shears</strong><br>
               <a href="https://amzn.to/4o0d8nK" target="_blank">Buy on Amazon</a><br>
               <em>click on the link and check out these products</em>
             </div>
           </div>
 
           <div class="amazon-prod">
-            <img src="images/hiraliy-drip.jpg" alt="HIRALIY 50 ft Drip Irrigation Kit">
+            <img src="images/hiraliy-drip.jpg" alt="">
             <div>
-              <strong>HIRALIY 50 ft Drip Irrigation Kit</strong><br>
-              DIY automatic watering with 8×5 mm tubing<br>
+              <strong>HIRALIY Drip Kit</strong><br>
               <a href="https://amzn.to/3JlKrSY" target="_blank">Buy on Amazon</a><br>
               <em>click on the link and check out these products</em>
             </div>
           </div>
 
           <div class="amazon-prod">
-            <img src="images/workpro-shear.jpg" alt="WORKPRO Cordless Grass Shear &amp; Shrubbery Trimmer">
+            <img src="images/workpro-shear.jpg" alt="">
             <div>
-              <strong>WORKPRO Cordless Grass Shear &amp; Shrubbery Trimmer</strong><br>
-              2-in-1 handheld tool with rechargeable battery<br>
+              <strong>WORKPRO Grass Shear</strong><br>
               <a href="https://amzn.to/3J4Icn3" target="_blank">Buy on Amazon</a><br>
               <em>click on the link and check out these products</em>
             </div>
           </div>
 
           <div class="amazon-prod">
-            <img src="images/veggie-seeds.jpg" alt="55 Vegetable Seeds Variety Pack">
+            <img src="images/veggie-seeds.jpg" alt="">
             <div>
-              <strong>55 Vegetable Seeds Variety Pack</strong><br>
-              35,600+ Non-GMO heirloom seeds in labeled packets — great for indoor/outdoor gardens<br>
+              <strong>55 Vegetable Seeds Pack</strong><br>
               <a href="https://amzn.to/4nesrYu" target="_blank">Buy on Amazon</a><br>
               <em>click on the link and check out these products</em>
             </div>
           </div>
 
           <div class="amazon-prod">
-            <img src="images/mini-chainsaw.jpg" alt="BIG RED 4″ Mini Cordless Chainsaw">
+            <img src="images/mini-chainsaw.jpg" alt="">
             <div>
-              <strong>BIG RED 4″ Mini Cordless Chainsaw</strong><br>
-              Portable, battery-powered saw for wood, garden and shrub pruning<br>
+              <strong>BIG RED 4″ Mini Chainsaw</strong><br>
               <a href="https://amzn.to/4nWMWdr" target="_blank">Buy on Amazon</a><br>
               <em>click on the link and check out these products</em>
             </div>
           </div>
+
         </div>
       </aside>
       <!-- End: Sidebar -->
