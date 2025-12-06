@@ -1,7 +1,17 @@
-<!-- Gardening With Kev v5 | Updated October 2025 -->
+<!-- Gardening With Kev v6 | Updated December 2025 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JL4D4ENVQQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-JL4D4ENVQQ');
+  </script>
+
   <!-- Start: Meta -->
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -11,6 +21,11 @@
   <meta property="og:description" content="Simple, natural gardening inspired by Jamaica.">
   <meta property="og:type" content="website">
   <!-- End: Meta -->
+
+  <!-- Start: Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <!-- End: Favicon -->
 
   <!-- Start: Styles -->
   <style>
@@ -34,11 +49,10 @@
     header{display:flex;align-items:center;justify-content:space-between;gap:12px}
     .brand{display:flex;align-items:center;gap:12px}
     .logo{
-      width:54px;height:54px;
-      background:var(--green);
-      border-radius:10px;
-      display:flex;align-items:center;justify-content:center;
-      color:#fff;font-weight:800;
+      width:64px;
+      height:auto;
+      border-radius:999px;
+      display:block;
     }
     .tagline{color:#2f6e3f;font-size:13px;margin-top:2px}
     nav a{margin-left:12px;color:var(--muted)}
@@ -189,7 +203,7 @@
     <!-- Start: Header -->
     <header id="top">
       <div class="brand">
-        <div class="logo">GWK</div>
+        <img src="gwk-logo.png" class="logo" alt="Gardening With Kev Logo">
         <div>
           <div style="font-weight:800">Gardening With Kev</div>
           <div class="tagline">Simple, natural gardening inspired by Jamaica</div>
@@ -203,6 +217,14 @@
       </nav>
     </header>
     <!-- End: Header -->
+
+    <!-- Start: Logo Above Banner -->
+    <div style="text-align:center; margin: 20px 0 10px 0;">
+      <img src="gwk-logo.png"
+           alt="Gardening With Kev Logo"
+           style="width:220px; height:auto; border-radius:999px;">
+    </div>
+    <!-- End: Logo Above Banner -->
 
     <!-- Start: Banner -->
     <section class="site-banner" role="img" aria-label="Jamaican hillside with lush greenery">
@@ -406,15 +428,17 @@
 
     <!-- Start: Footer -->
     <footer>
+      <div style="margin-bottom:8px;">
+        <img src="gwk-logo.png"
+             alt="Gardening With Kev Logo"
+             style="width:90px; height:auto; border-radius:999px;">
+      </div>
       <div>© <span id="year"></span> Gardening With Kev</div>
       <div style="margin-top:4px">Made with love in Jamaica 🌴 by Gardening With Kev</div>
       <div style="font-size:12px;color:#666;margin-top:4px">
         As an Amazon Associate I earn from qualifying purchases.
       </div>
-      <div style="font-size:12px;color:#666;margin-top:4px">Last Updated: October 2025</div>
-      <div style="font-size:12px;color:#666;margin-top:4px">
-        <a href="privacy.html" style="color:inherit;text-decoration:underline;">Privacy Policy</a>
-      </div>
+      <div style="font-size:12px;color:#666;margin-top:4px">Last Updated: December 2025</div>
     </footer>
     <!-- End: Footer -->
   </div>
