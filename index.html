@@ -1,399 +1,198 @@
-<!-- Gardening With Kev v5 | Updated October 2025 -->
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JL4D4ENVQQ"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-JL4D4ENVQQ');
-  </script>
-<!-- Start: Meta -->
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Gardening With Kev</title>
-<meta content="Gardening With Kev – Simple, natural gardening inspired by Jamaica. Learn to grow plants in everyday containers and discover affordable gardening tips." name="description"/>
-<meta content="Gardening With Kev" property="og:title"/>
-<meta content="Simple, natural gardening inspired by Jamaica." property="og:description"/>
-<meta content="website" property="og:type"/>
-<!-- End: Meta -->
-<!-- Start: Styles -->
-<style>
-    :root{
-      --accent:#2b6cb0;
-      --muted:#666;
-      --green:#2f9e44;
-      --card:#ffffff;
-      --bg:#f7f7f8;
-      --text:#111;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
-      font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial;
-      background:var(--bg);
-      color:var(--text);
-    }
-    .container{max-width:1100px;margin:28px auto;padding:0 18px}
-    a{text-decoration:none;color:var(--accent)}
-    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{
-      width:54px;height:54px;
-      background:var(--green);
-      border-radius:10px;
-      display:flex;align-items:center;justify-content:center;
-      color:#fff;font-weight:800;
-    }
-    .tagline{color:#2f6e3f;font-size:13px;margin-top:2px}
-    nav a{margin-left:12px;color:var(--muted)}
-    nav a:hover{color:#000}
-    .hero{
-      display:grid;
-      grid-template-columns:1fr 320px;
-      gap:18px;
-      margin-top:22px;
-    }
-    .card{
-      background:var(--card);
-      border-radius:12px;
-      padding:18px;
-      box-shadow:0 6px 18px rgba(20,20,30,.05);
-    }
-    .post h2{margin:0 0 6px;color:var(--green)}
-    .date{color:var(--muted);font-size:13px;margin-bottom:10px}
-    .post img.main{
-      width:100%;
-      max-width:640px;
-      border-radius:12px;
-      margin:10px 0 12px;
-    }
-    .gallery{
-      display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:10px;
-      margin-top:8px;
-    }
-    .gallery img{
-      width:100%;
-      border-radius:10px;
-    }
-    .yt-embed{
-      width:100%;
-      height:315px;
-      border-radius:8px;
-      border:0;
-    }
-    .btn{
-      display:inline-block;
-      padding:10px 12px;
-      border-radius:8px;
-      text-align:center;
-      background:#2b6cb0;
-      color:#fff;
-      font-weight:600;
-      font-size:14px;
-    }
-    .btn:hover{opacity:.9}
-    .btn-yt{background:#e53935;color:#fff}
-    .btn-linktree{background:#111;color:#fff}
-    .about{display:flex;gap:12px;align-items:center}
-    .about img{
-      width:64px;height:64px;
-      border-radius:999px;
-      object-fit:cover;
-    }
-    .sidebar-section h4{margin:0 0 8px;color:var(--green)}
-    .amazon-prod{
-      display:flex;
-      gap:12px;
-      align-items:flex-start;
-      margin-bottom:12px;
-    }
-    .amazon-prod img{
-      width:120px;height:120px;
-      object-fit:cover;
-      border-radius:8px;
-    }
-    footer{
-      margin:28px 0;
-      text-align:center;
-      color:var(--muted);
-      font-size:14px;
-    }
-    @media (max-width:880px){
-      .hero{grid-template-columns:1fr}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gardening With Kev</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      margin: 0;
     }
 
-    .site-banner{
-      position:relative;
-      width:100%;
-      height:280px;
-      border-radius:12px;
-      margin:18px 0;
-      background-image:url('images/banner.jpg');
-      background-size:cover;
-      background-position:center;
-      box-shadow:0 6px 18px rgba(20,20,30,.05);
+    /* HEADER */
+    header {
+      background: #4caf50;
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-    .site-banner__overlay{
-      position:absolute;
-      inset:0;
-      border-radius:12px;
-      background:linear-gradient(180deg, rgba(0,0,0,.28), rgba(0,0,0,.18));
+
+    .logo {
+      width: 60px;
+      height: 60px;
+      background: #2e7d32;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+
+      /* Make logo image fit inside the green box */
+      overflow: hidden;
     }
-    .site-banner__text{
-      position:absolute;
-      inset:0;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      color:#fff;
-      font-weight:700;
-      letter-spacing:.2px;
-      font-size:clamp(18px,3.2vw,26px);
-      padding:0 16px;
-      z-index:1;
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
     }
-    @media (max-width:880px){
-      .site-banner{height:220px}
+
+    nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: bold;
     }
-  
-    .banner-row{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:12px;
-      margin:8px 0 24px
+
+    nav a:hover {
+      text-decoration: underline;
     }
-    .banner{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:12px;
-      padding:16px;
-      border-radius:16px;
-      background:#f8fafc;
-      box-shadow:0 10px 20px rgba(0,0,0,0.06),0 2px 6px rgba(0,0,0,0.05);
-      text-decoration:none;
-      color:var(--text)
+
+    /* BANNER */
+    .banner {
+      width: 100%;
+      height: 250px;
+      background: url("banner.jpg") center/cover no-repeat;
     }
-    .banner strong{font-weight:800}
-    .banner small{color:#6b7280}
-    .disclosure-mini{
-      font-size:11px;
-      color:#6b7280;
-      margin-top:4px;
-      text-align:center;
+
+    /* PAGE LAYOUT */
+    .content {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    /* MAIN POSTS */
+    main {
+      flex: 3;
+    }
+
+    .post {
+      background: white;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    /* SIDEBAR */
+    aside {
+      flex: 1;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer img {
+      width: 70px;
+      height: 70px;
+      border-radius: 999px;
+      object-fit: cover;
+      margin-bottom: 10px;
     }
   </style>
-<!-- End: Styles -->
 </head>
+
 <body>
-<div class="container">
-<!-- Start: Header -->
-<header id="top">
-<div class="brand">
-<div class="logo">GWK</div>
-<div>
-<div style="font-weight:800">Gardening With Kev</div>
-<div class="tagline">Simple, natural gardening inspired by Jamaica</div>
-</div>
-</div>
-<nav><a href="index.html">Home</a><a href="index.html#posts">Posts</a><a href="about.html">About</a><a href="https://linktr.ee/kevingfos" rel="noopener" target="_blank">Contact</a><a href="books.html">Books &amp; eBooks</a></nav>
-</header>
-<!-- End: Header -->
-<!-- Start: Banner -->
-<section aria-label="Jamaican hillside with lush greenery" class="site-banner" role="img">
-<div class="site-banner__overlay"></div>
-<div class="site-banner__text">Simple, natural gardening inspired by Jamaica 🌴</div>
-</section>
-<section class="banner-row">
-<a class="banner" href="https://www.amazon.com/prime?tag=gardening00d9-20" rel="nofollow noopener sponsored" target="_blank">
-<strong>Amazon Prime</strong>
-<small>Fast delivery, movies, music &amp; more</small>
-</a>
-</section>
-<div class="disclosure-mini">
-      Disclosure: As an Amazon Associate I earn from qualifying purchases. #ads
+
+  <!-- HEADER WITH LOGO IMAGE INSIDE GREEN BOX -->
+  <header>
+    <div class="logo">
+      <img src="gwk-logo.png" alt="Gardening With Kev Logo">
     </div>
-<!-- End: Banner -->
-<!-- Start: Main -->
-<main class="hero">
-<!-- Start: Posts -->
-<section id="posts">
-<!-- Aloe Vera Preview -->
-<article class="card post">
-<h2>🌿 Aloe Vera: The Healing Plant Every Home Should Have</h2>
-<div class="date">Posted October 2025</div>
-<img alt="Aloe Vera plant at home" class="main" src="images/aloe-vera.jpg"/>
-<p>
-            Aloe Vera is one of the most useful and low-maintenance plants you can grow at home.
-            It’s a natural first aid kit, a beauty treatment, and an important part of traditional
-            Jamaican remedies.
-          </p>
-<p>
-<a class="btn" href="aloe-vera.html">Read the full Aloe guide</a>
-</p>
-</article>
-<!-- Life Plant Preview -->
-<article class="card post">
-<h2>🌿 The Life Plant and Its Healing Power</h2>
-<div class="date">Posted October 2025</div>
-<img alt="Life plant (Kalanchoe pinnata) in a pot" class="main" src="images/life-plant.jpg"/>
-<p>
-            The Life Plant, also called Wonder of the World, is a beloved medicinal plant across the
-            Caribbean. It’s tough, easy to grow, and often used in home herbal remedies.
-          </p>
-<p>
-<a class="btn" href="life-plant.html">Read the full Life Plant guide</a>
-</p>
-</article>
-<!-- Pineapple Post (already separate page) -->
-<article class="card post">
-<h2>🍍 How I Planted Pineapples at Home</h2>
-<div class="date">Posted November 2025</div>
-<img alt="Pineapple plants growing in full sun" class="main" src="Pineapple from tops planted in full sun.jpg"/>
-<p>
-            I planted pineapples using tops from market fruits and pups from an existing plant.
-            In this post I share how I rooted the tops in water, planted them in sun and shade,
-            and how they’re growing so far.
-          </p>
-<p>
-<a href="pineapple.html" style="display:inline-block;padding:10px 14px;border-radius:8px;
-                      background:#2b6cb0;color:#fff;text-decoration:none;font-weight:600;">
-              Read the full pineapple guide
-            </a>
-</p>
-</article>
-<!-- Planting in Containers Preview -->
-<article class="card post">
-<h2>🌱 Planting in Containers</h2>
-<div class="date">Posted October 2025</div>
-<img alt="Plants growing in a reused plastic bottle" class="main" src="images/container-01.jpg"/>
-<p>
-            At home, I’ve planted flowers, fever grass, aloe vera and other plants in all kinds of
-            containers — water bottles, buckets, tins, even old paint pans. Plants don’t care how the
-            pot looks, once they have soil, water and light.
-          </p>
-<p>
-<a class="btn" href="planting-in-containers.html">Read the full containers guide</a>
-</p>
-</article>
-<!-- Seed Info Post -->
-<article class="card post">
-<h2>🌱 Wondering Why Your Seeds Didn’t Grow?</h2>
-<div class="date">Posted November 2025</div>
-<img alt="Seed packet showing date example" class="main" src="images/seed-packet-with-date.jpg"/>
-<p>
-            You planted your seeds, watered them, waited... and nothing came up.
-            Before you blame your “bad hands,” it may be the seeds, how they were stored,
-            or a few simple planting mistakes. Click below to learn what to check.
-          </p>
-<p>
-<a class="btn" href="seed-info.html">Read the full seed guide</a>
-</p>
-</article>
-</section>
-<!-- End: Posts -->
-<!-- Start: Sidebar -->
-<aside>
-<!-- About Kevin -->
-<div class="card about" id="contact">
-<img alt="Kevin portrait" src="images/kev-circle.png"/>
-<div><strong>About Kevin</strong><br/>Hi, I’m Kevin, a Jamaican home gardener who loves helping people grow healthy plants using simple, natural methods.<br/><a href="about.html">Read more →</a></div>
-</div>
-<!-- Follow on YouTube -->
-<div class="card sidebar-section">
-<h4>Follow on YouTube</h4>
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="yt-embed" src="https://www.youtube.com/embed/APF2cXIATJc?start=40" title="Gardening With Kev YouTube Video">
-</iframe>
-<a class="btn btn-yt" href="https://www.youtube.com/@gardeningwithkev" rel="noopener" target="_blank">
-            Visit my YouTube
-          </a>
-</div>
-<!-- Contact via Linktree -->
-<div class="card sidebar-section">
-<h4>Contact Kevin</h4>
-<a class="btn btn-linktree" href="https://linktr.ee/kevingfos" rel="noopener" target="_blank">
-            Message me on Linktree
-          </a>
-</div>
-<!-- Featured Amazon Products -->
-<div class="card sidebar-section">
-<h4>🌿 Featured Products &amp; Tools</h4>
-<p style="font-size:12px;color:#666;margin-top:4px">
-            Some of the links below are affiliate links. As an Amazon Associate I earn from qualifying purchases.
-          </p>
-<div class="amazon-prod">
-<img alt="Fiskars Bypass Pruning Shears" src="images/fiskars-shears.jpg"/>
-<div>
-<strong>Fiskars Bypass Pruning Shears</strong><br/>
-              Ideal for clean cuts on live plants<br/>
-<a href="https://amzn.to/4o0d8nK" target="_blank">Buy on Amazon</a><br/>
-<em>click on the link and check out these products</em>
-</div>
-</div>
-<div class="amazon-prod">
-<img alt="HIRALIY 50 ft Drip Irrigation Kit" src="images/hiraliy-drip.jpg"/>
-<div>
-<strong>HIRALIY 50 ft Drip Irrigation Kit</strong><br/>
-              DIY automatic watering with 8×5 mm tubing<br/>
-<a href="https://amzn.to/3JlKrSY" target="_blank">Buy on Amazon</a><br/>
-<em>click on the link and check out these products</em>
-</div>
-</div>
-<div class="amazon-prod">
-<img alt="WORKPRO Cordless Grass Shear &amp; Shrubbery Trimmer" src="images/workpro-shear.jpg"/>
-<div>
-<strong>WORKPRO Cordless Grass Shear &amp; Shrubbery Trimmer</strong><br/>
-              2-in-1 handheld tool with rechargeable battery<br/>
-<a href="https://amzn.to/3J4Icn3" target="_blank">Buy on Amazon</a><br/>
-<em>click on the link and check out these products</em>
-</div>
-</div>
-<div class="amazon-prod">
-<img alt="55 Vegetable Seeds Variety Pack" src="images/veggie-seeds.jpg"/>
-<div>
-<strong>55 Vegetable Seeds Variety Pack</strong><br/>
-              35,600+ Non-GMO heirloom seeds in labeled packets — great for indoor/outdoor gardens<br/>
-<a href="https://amzn.to/4nesrYu" target="_blank">Buy on Amazon</a><br/>
-<em>click on the link and check out these products</em>
-</div>
-</div>
-<div class="amazon-prod">
-<img alt="BIG RED 4″ Mini Cordless Chainsaw" src="images/mini-chainsaw.jpg"/>
-<div>
-<strong>BIG RED 4″ Mini Cordless Chainsaw</strong><br/>
-              Portable, battery-powered saw for wood, garden and shrub pruning<br/>
-<a href="https://amzn.to/4nWMWdr" target="_blank">Buy on Amazon</a><br/>
-<em>click on the link and check out these products</em>
-</div>
-</div>
-</div>
-</aside>
-<!-- End: Sidebar -->
-</main>
-<!-- End: Main -->
-<!-- Start: Footer -->
-<footer>
-<div>© <span id="year"></span> Gardening With Kev</div>
-<div style="margin-top:4px">Made with love in Jamaica 🌴 by Gardening With Kev</div>
-<div style="font-size:12px;color:#666;margin-top:4px">
-        As an Amazon Associate I earn from qualifying purchases.
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#posts">Posts</a>
+      <a href="about.html">About</a>
+      <a href="https://linktr.ee/kevingfos" target="_blank" rel="noopener">Contact</a>
+      <a href="books.html">Books & eBooks</a>
+    </nav>
+  </header>
+
+  <div class="banner"></div>
+
+  <div class="content">
+    <main>
+      <h2 id="posts">Latest Posts</h2>
+
+      <!-- Post #1 -->
+      <div class="post">
+        <h3><a href="life-plant.html">Growing the Life Plant (Wonder of the World)</a></h3>
+        <p>A simple guide to caring for this beautiful medicinal plant.</p>
       </div>
-<div style="font-size:12px;color:#666;margin-top:4px">Last Updated: October 2025</div>
-</footer>
-<!-- End: Footer -->
-</div>
-<!-- Start: Scripts -->
-<script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+
+      <!-- Post #2 -->
+      <div class="post">
+        <h3><a href="planting-in-containers.html">Planting in Containers</a></h3>
+        <p>You don’t need fancy pots — learn how to grow using bottles, tins & buckets.</p>
+      </div>
+
+      <!-- Post #3 -->
+      <div class="post">
+        <h3><a href="aloe-vera.html">Aloe Vera Care</a></h3>
+        <p>Tips for keeping your aloe healthy, green, and growing.</p>
+      </div>
+    </main>
+
+    <aside>
+      <!-- ABOUT KEVIN CARD -->
+      <div class="card">
+        <img src="images/kev-circle.png" alt="Kevin Photo">
+        <strong>About Kevin</strong>
+        <p>Hi, I’m Kevin, a Jamaican home gardener who loves helping people grow healthy plants using simple, natural methods.</p>
+        <a href="about.html">Read more →</a>
+      </div>
+
+      <!-- SEEDS CARD -->
+      <div class="card">
+        <img src="images/seeds.jpg" alt="Seeds">
+        <strong>Recommended Seeds</strong>
+        <p>Good starter seeds for your home garden.</p>
+        <a href="seed-info.html">Learn more →</a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- UPDATED FOOTER WITH LOGO IMAGE -->
+  <footer>
+    <img src="gwk-logo.png" alt="Gardening With Kev Logo">
+
+    <div>© <span id="year"></span> Gardening With Kev</div>
+    <div>Made with love in Jamaica 🌴 by Gardening With Kev</div>
+    <div>As an Amazon Associate I earn from qualifying purchases.</div>
+    <div>Last Updated: October 2025</div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-<!-- End: Scripts -->
+
 </body>
 </html>
