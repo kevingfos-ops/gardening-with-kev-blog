@@ -1,0 +1,263 @@
+/* Gardening With Kev – Global Styles */
+
+/* Basic reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: #1f2933;
+  background-color: #f7faf7;
+}
+
+/* Layout helpers */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Header */
+.site-header {
+  background: linear-gradient(135deg, #134e2a, #1b7c3c);
+  color: #ffffff;
+  padding: 2.75rem 0 2.25rem; /* taller header */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+
+.header-inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.logo-block {
+  max-width: 650px;
+}
+
+.site-title {
+  font-size: clamp(2.6rem, 4.5vw, 3.6rem); /* bigger main title */
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.site-subtitle {
+  margin-top: 0.4rem;
+  font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+  opacity: 0.9;
+}
+
+/* Optional nav (currently commented out in HTML) */
+.main-nav a {
+  margin-left: 1rem;
+  font-size: 0.95rem;
+  color: #e5ffe9;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.main-nav a:hover {
+  border-bottom-color: #e5ffe9;
+}
+
+/* Intro / tagline strip – SMALLER HEIGHT */
+.intro-strip {
+  background-color: #eef6ee;
+  padding: 0.75rem 0 1rem; /* reduced padding so the section feels smaller */
+  border-bottom: 1px solid rgba(19, 78, 42, 0.12);
+}
+
+.intro-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.intro-text-block {
+  flex: 1 1 260px;
+}
+
+.intro-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #134e2a;
+  margin-bottom: 0.1rem; /* very tight to help keep height small */
+}
+
+.intro-text {
+  font-size: 0.95rem;
+  color: #111827;
+}
+
+/* Tags row */
+.intro-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: flex-start;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background-color: #ffffff;
+  border: 1px solid rgba(19, 78, 42, 0.2);
+  white-space: nowrap;
+}
+
+/* Main layout */
+.site-main {
+  padding: 1.8rem 0 2.5rem; /* brings posts section up a bit */
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr);
+  gap: 1.75rem;
+}
+
+/* Posts */
+.section-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #134e2a;
+}
+
+.posts {
+  min-width: 0;
+}
+
+.post-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.1rem 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.post-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.post-title a {
+  color: #134e2a;
+  text-decoration: none;
+}
+
+.post-title a:hover {
+  text-decoration: underline;
+}
+
+.post-excerpt {
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
+.post-meta {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* Sidebar */
+.sidebar {
+  min-width: 0;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  color: #134e2a;
+}
+
+.card p {
+  font-size: 0.9rem;
+}
+
+.link-list {
+  list-style: none;
+}
+
+.link-list li + li {
+  margin-top: 0.25rem;
+}
+
+.link-list a {
+  font-size: 0.9rem;
+  color: #166534;
+  text-decoration: none;
+}
+
+.link-list a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid rgba(148, 163, 184, 0.5);
+  padding: 1rem 0 1.4rem;
+  background-color: #ffffff;
+  font-size: 0.85rem;
+  color: #4b5563;
+  text-align: center;
+}
+
+/* Responsive tweaks */
+@media (max-width: 800px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .layout {
+    grid-template-columns: 1fr; /* stack posts & sidebar */
+  }
+
+  .sidebar {
+    order: -1; /* sidebar above posts on small screens (you can remove if you prefer) */
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    padding: 2.1rem 0 1.7rem;
+  }
+
+  .site-title {
+    font-size: 2.1rem;
+  }
+
+  .intro-strip {
+    padding: 0.65rem 0 0.85rem;
+  }
+}
