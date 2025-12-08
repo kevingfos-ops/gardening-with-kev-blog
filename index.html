@@ -1,4 +1,4 @@
-<!-- Gardening With Kev v5 | Updated October 2025 -->
+<!-- Gardening With Kev v6 | Updated December 2025 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,19 +14,26 @@
 
   <!-- Start: Meta -->
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Gardening With Kev</title>
-  <meta name="description" content="Gardening With Kev is a simple, practical home gardening blog from Jamaica, focused on growing with what you have.">
+  <meta name="description" content="Gardening With Kev – Simple, natural gardening inspired by Jamaica. Learn to grow plants in everyday containers and discover affordable gardening tips.">
+  <meta property="og:title" content="Gardening With Kev">
+  <meta property="og:description" content="Simple, natural gardening inspired by Jamaica.">
+  <meta property="og:type" content="website">
   <!-- End: Meta -->
+
+  <!-- Start: Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <!-- End: Favicon -->
 
   <!-- Start: Styles -->
   <style>
     :root{
-      --green:#15803d;
-      --green-soft:#ecfdf3;
       --accent:#2b6cb0;
-      --border:#e5e7eb;
-      --muted:#6b7280;
+      --muted:#666;
+      --green:#2f9e44;
+      --card:#ffffff;
       --bg:#f7f7f8;
       --text:#111;
     }
@@ -41,20 +48,15 @@
     a{text-decoration:none;color:var(--accent)}
     header{display:flex;align-items:center;justify-content:space-between;gap:12px}
     .brand{display:flex;align-items:center;gap:12px}
+
+    /* Updated logo size */
     .logo{
-      width:54px;height:54px;
-      background:var(--green);
-      border-radius:10px;
-      display:flex;align-items:center;justify-content:center;
-      color:#fff;font-weight:800;
-      overflow:hidden;
+      width:80px;
+      height:auto;
+      border-radius:999px;
+      display:block;
     }
-    .logo img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      border-radius:10px;
-    }
+
     .tagline{color:#2f6e3f;font-size:13px;margin-top:2px}
     nav a{margin-left:12px;color:var(--muted)}
     nav a:hover{color:#000}
@@ -64,42 +66,42 @@
       gap:18px;
       margin-top:22px;
     }
-    .hero-main{
-      background:#fff;
-      border-radius:16px;
-      padding:18px 18px 20px;
-      box-shadow:0 10px 30px rgba(15,23,42,.08);
-      border:1px solid rgba(148,163,184,.35);
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(20,20,30,.05);
     }
-    .hero-main h1{
-      margin:0 0 10px;
-      font-size:26px;
-      line-height:1.2;
+    .post h2{margin:0 0 6px;color:var(--green)}
+    .date{color:var(--muted);font-size:13px;margin-bottom:10px}
+    .post img.main{
+      width:100%;
+      max-width:640px;
+      border-radius:12px;
+      margin:10px 0 12px;
     }
-    .hero-main p{
-      margin:0 0 14px;
-      color:var(--muted);
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:10px;
+      margin-top:8px;
     }
-    .hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
-    .tag{
-      background:var(--green-soft);
-      color:var(--green);
-      padding:4px 9px;
-      border-radius:999px;
-      font-size:12px;
-      border:1px solid rgba(22,163,74,.25);
+    .gallery img{
+      width:100%;
+      border-radius:10px;
     }
-    .btn-row{display:flex;flex-wrap:wrap;gap:8px}
+    .yt-embed{
+      width:100%;
+      height:315px;
+      border-radius:8px;
+      border:0;
+    }
     .btn{
-      padding:7px 12px;
-      border-radius:999px;
-      border:none;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:6px;
-      cursor:pointer;
-      background:#111827;
+      display:inline-block;
+      padding:10px 12px;
+      border-radius:8px;
+      text-align:center;
+      background:#2b6cb0;
       color:#fff;
       font-weight:600;
       font-size:14px;
@@ -112,40 +114,6 @@
       width:64px;height:64px;
       border-radius:999px;
       object-fit:cover;
-    }
-
-    .posts-layout{
-      display:grid;
-      grid-template-columns:2.2fr 1.2fr;
-      gap:20px;
-      margin-top:26px;
-    }
-    .post-card{
-      background:#fff;
-      border-radius:14px;
-      padding:14px 16px 16px;
-      margin-bottom:14px;
-      border:1px solid var(--border);
-      box-shadow:0 6px 20px rgba(15,23,42,.04);
-    }
-    .post-card h3{margin:0 0 6px;font-size:18px}
-    .post-card p{
-      margin:0;
-      color:var(--muted);
-      font-size:14px;
-    }
-    .post-meta{
-      font-size:12px;
-      color:#9ca3af;
-      margin-bottom:6px;
-    }
-    .sidebar-section{
-      background:#fff;
-      border-radius:14px;
-      padding:14px 14px 16px;
-      margin-bottom:14px;
-      border:1px solid var(--border);
-      box-shadow:0 6px 20px rgba(15,23,42,.04);
     }
     .sidebar-section h4{margin:0 0 8px;color:var(--green)}
     .amazon-prod{
@@ -162,81 +130,89 @@
     footer{
       margin:28px 0;
       text-align:center;
-      color:var(--muted);
-      font-size:13px;
+      color:#666;
+      font-size:14px;
+    }
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr}
     }
 
-    /* Banner */
     .site-banner{
       position:relative;
-      border-radius:16px;
-      overflow:hidden;
-      margin-top:20px;
-      background:url('images/banner.jpg') center/cover no-repeat;
-      min-height:170px;
+      width:100%;
+      height:280px;
+      border-radius:12px;
+      margin:18px 0;
+      background-image:url('images/banner.jpg');
+      background-size:cover;
+      background-position:center;
+      box-shadow:0 6px 18px rgba(20,20,30,.05);
     }
     .site-banner__overlay{
       position:absolute;
       inset:0;
-      background:linear-gradient(90deg,rgba(15,23,42,.72),transparent);
+      border-radius:12px;
+      background:linear-gradient(180deg, rgba(0,0,0,.28), rgba(0,0,0,.18));
     }
     .site-banner__text{
-      position:relative;
-      padding:18px;
-      color:#fff;
-      font-size:18px;
-      max-width:320px;
-    }
-    .banner-row{
-      margin-top:10px;
+      position:absolute;
+      inset:0;
       display:flex;
-      justify-content:flex-start;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#fff;
+      font-weight:700;
+      letter-spacing:.2px;
+      font-size:clamp(18px,3.2vw,26px);
+      padding:0 16px;
+      z-index:1;
+    }
+    @media (max-width:880px){
+      .site-banner{height:220px}
+    }
+  
+    .banner-row{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:12px;
+      margin:8px 0 24px
     }
     .banner{
-      display:inline-flex;
-      flex-direction:column;
-      align-items:flex-start;
-      background:#111827;
-      color:#f9fafb;
-      border-radius:999px;
-      padding:7px 14px;
-      font-size:13px;
-      border:1px solid rgba(148,163,184,.6);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      padding:16px;
+      border-radius:16px;
+      background:#f8fafc;
+      box-shadow:0 10px 20px rgba(0,0,0,0.06),0 2px 6px rgba(0,0,0,0.05);
+      text-decoration:none;
+      color:var(--text)
     }
-    .banner small{color:#e5e7eb;font-size:12px}
+    .banner strong{font-weight:800}
+    .banner small{color:#6b7280}
     .disclosure-mini{
       font-size:11px;
       color:#6b7280;
       margin-top:4px;
-    }
-
-    @media(max-width:800px){
-      .hero{grid-template-columns:1fr}
-      .posts-layout{grid-template-columns:1fr}
-      header{
-        flex-direction:column;
-        align-items:flex-start;
-      }
-      nav{margin-top:6px}
-      nav a{margin-left:0;margin-right:10px}
+      text-align:center;
     }
   </style>
   <!-- End: Styles -->
 </head>
-
 <body>
   <div class="container">
     <!-- Start: Header -->
     <header id="top">
       <div class="brand">
-        <div class="logo">
-          <img src="gwk-logo.png" alt="Gardening With Kev logo" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
-        </div>
+        <img src="gwk-logo.png" class="logo" alt="Gardening With Kev Logo">
         <div>
           <div style="font-weight:800">Gardening With Kev</div>
           <div class="tagline">Simple, natural gardening inspired by Jamaica</div>
         </div>
       </div>
+
       <nav>
         <a href="#top">Home</a>
         <a href="#posts">Posts</a>
@@ -245,6 +221,8 @@
       </nav>
     </header>
     <!-- End: Header -->
+
+    <!-- BIG LOGO ABOVE BANNER REMOVED -->
 
     <!-- Start: Banner -->
     <section class="site-banner" role="img" aria-label="Jamaican hillside with lush greenery">
@@ -262,123 +240,158 @@
       </a>
     </section>
     <div class="disclosure-mini">
-      Disclosure: As an Amazon Associate I earn from qualifying purchases.
+      Disclosure: As an Amazon Associate I earn from qualifying purchases. #ads
     </div>
     <!-- End: Banner -->
 
-    <!-- Start: Hero + Sidebar -->
-    <section class="hero">
-      <div class="hero-main">
-        <h1>Grow with what you have, right where you are.</h1>
-        <p>Gardening With Kev is a small-space home gardening blog from Jamaica — showing how to grow using containers, buckets, recycled bottles, and simple methods.</p>
-        <div class="hero-tags">
-          <span class="tag">Small-space gardening</span>
-          <span class="tag">Jamaica-based</span>
-          <span class="tag">Containers &amp; buckets</span>
-          <span class="tag">Beginner friendly</span>
-        </div>
-        <div class="btn-row">
-          <a href="https://www.youtube.com" target="_blank" rel="noopener" class="btn btn-yt">
-            ▶ Watch on YouTube
-          </a>
-          <a href="https://linktr.ee/kevingfos" target="_blank" rel="noopener" class="btn btn-linktree">
-            🔗 Visit my link hub
-          </a>
-        </div>
-      </div>
+    <!-- Start: Main -->
+    <main class="hero">
+      <!-- Start: Posts -->
+      <section id="posts">
 
-      <aside class="hero-aside">
-        <div class="sidebar-section">
-          <h4>About Kevin</h4>
-          <div class="about">
-            <img src="images/kev-circle.png" alt="Kevin, Jamaican home gardener">
-            <div>
-              <p style="margin:0 0 6px;font-size:14px">
-                Hi, I’m Kevin — a Jamaican home gardener sharing simple, practical tips for growing with what you have.
-              </p>
-              <a href="about.html">Read my story →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="sidebar-section">
-          <h4>New to Gardening?</h4>
-          <p style="margin:0 0 8px;font-size:14px">
-            Start small. One container, one plant, one simple habit at a time.
-          </p>
-          <a href="planting-in-containers.html">Start with containers →</a>
-        </div>
-      </aside>
-    </section>
-    <!-- End: Hero + Sidebar -->
-
-    <!-- Start: Posts Layout -->
-    <section class="posts-layout">
-      <div>
-        <h2 id="posts">Latest posts</h2>
-
-        <article class="post-card">
-          <div class="post-meta">Growing · Home Garden</div>
-          <h3><a href="life-plant.html">The Life Plant (Wonder of the World)</a></h3>
-          <p>Learn how I care for this beautiful plant — from watering to sunlight and simple home tips.</p>
+        <!-- Aloe preview -->
+        <article class="card post">
+          <h2>🌿 Aloe Vera: The Healing Plant Every Home Should Have</h2>
+          <div class="date">Posted October 2025</div>
+          <img src="images/aloe-vera.jpg" class="main" alt="Aloe Vera plant">
+          <p>Aloe Vera is one of the most useful and low-maintenance plants...</p>
+          <p><a class="btn" href="aloe-vera.html">Read the full Aloe guide</a></p>
         </article>
 
-        <article class="post-card">
-          <div class="post-meta">Containers · Small Spaces</div>
-          <h3><a href="planting-in-containers.html">Planting in Containers</a></h3>
-          <p>You don’t need fancy pots. See how I grow in bottles, tins, buckets and other recycled containers.</p>
+        <!-- Life Plant -->
+        <article class="card post">
+          <h2>🌿 The Life Plant and Its Healing Power</h2>
+          <div class="date">Posted October 2025</div>
+          <img src="images/life-plant.jpg" class="main" alt="Life plant">
+          <p>The Life Plant, also called Wonder of the World...</p>
+          <p><a class="btn" href="life-plant.html">Read the full Life Plant guide</a></p>
         </article>
 
-        <article class="post-card">
-          <div class="post-meta">Aloe · Care Tips</div>
-          <h3><a href="aloe-vera.html">Basic Aloe Vera Care</a></h3>
-          <p>Simple ways to keep your Aloe Vera healthy, green and growing in the Jamaican climate.</p>
+        <!-- Pineapple -->
+        <article class="card post">
+          <h2>🍍 How I Planted Pineapples at Home</h2>
+          <div class="date">Posted November 2025</div>
+          <img src="Pineapple from tops planted in full sun.jpg" class="main" alt="Pineapple plants">
+          <p>I planted pineapples using tops from market fruits...</p>
+          <p><a class="btn" href="pineapple.html">Read the full pineapple guide</a></p>
         </article>
 
-        <article class="post-card">
-          <div class="post-meta">Fruit · Backyard</div>
-          <h3><a href="pineapple.html">Growing Pineapples in Containers</a></h3>
-          <p>From crowns to containers — what I’ve learned about growing pineapples at home.</p>
+        <!-- Containers -->
+        <article class="card post">
+          <h2>🌱 Planting in Containers</h2>
+          <div class="date">Posted October 2025</div>
+          <img src="images/container-01.jpg" class="main" alt="Plants in reused bottle">
+          <p>At home, I’ve planted flowers, fever grass, aloe vera and more in simple containers...</p>
+          <p><a class="btn" href="planting-in-containers.html">Read the full containers guide</a></p>
         </article>
-      </div>
 
+        <!-- Seeds -->
+        <article class="card post">
+          <h2>🌱 Wondering Why Your Seeds Didn’t Grow?</h2>
+          <div class="date">Posted November 2025</div>
+          <img src="images/seed-packet-with-date.jpg" class="main" alt="Seed packet">
+          <p>You planted your seeds, watered them, waited... and nothing came up...</p>
+          <p><a class="btn" href="seed-info.html">Read the full seed guide</a></p>
+        </article>
+
+      </section>
+      <!-- End: Posts -->
+
+      <!-- Start: Sidebar -->
       <aside>
-        <div class="sidebar-section">
-          <h4>Seeds &amp; Starters</h4>
-          <div class="amazon-prod">
-            <img src="images/seeds.jpg" alt="Assorted vegetable seeds">
-            <div>
-              <p style="margin:0 0 6px;font-size:14px">
-                Looking for vegetable seeds to get started?
-              </p>
-              <a href="seed-info.html">See my seed notes →</a>
-            </div>
+        <div class="card about" id="contact">
+          <img src="images/kev-circle.png" alt="Kevin portrait">
+          <div>
+            <strong>About Kevin</strong><br>
+            Hi, I’m Kevin! I love talking about plants and helping people grow healthy plants using simple,
+            natural methods inspired by Jamaican gardening traditions.
           </div>
         </div>
 
-        <div class="sidebar-section" id="contact">
-          <h4>Connect with me</h4>
-          <p style="margin:0 0 8px;font-size:14px">
-            You can find more of my content and links here:
-          </p>
-          <ul style="padding-left:18px;margin:0 0 8px;font-size:14px">
-            <li><a href="https://linktr.ee/kevingfos" target="_blank" rel="noopener">Linktree – All my links</a></li>
-            <li><a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube – Gardening With Kev</a></li>
-          </ul>
+        <!-- YouTube -->
+        <div class="card sidebar-section">
+          <h4>Follow on YouTube</h4>
+          <iframe class="yt-embed"
+            src="https://www.youtube.com/embed/APF2cXIATJc?start=40"
+            allowfullscreen></iframe>
+          <a class="btn btn-yt" href="https://www.youtube.com/@gardeningwithkev" target="_blank">Visit my YouTube</a>
+        </div>
+
+        <!-- Linktree -->
+        <div class="card sidebar-section">
+          <h4>Contact Kevin</h4>
+          <a class="btn btn-linktree" href="https://linktr.ee/kevingfos" target="_blank">Message me on Linktree</a>
+        </div>
+
+        <!-- Amazon -->
+        <div class="card sidebar-section">
+          <h4>🌿 Featured Products & Tools</h4>
+          <p style="font-size:12px;color:#666;">Some links below are affiliate links.</p>
+
+          <div class="amazon-prod">
+            <img src="images/fiskars-shears.jpg" alt="">
+            <div>
+              <strong>Fiskars Pruning Shears</strong><br>
+              <a href="https://amzn.to/4o0d8nK" target="_blank">Buy on Amazon</a><br>
+              <em>click on the link and check out these products</em>
+            </div>
+          </div>
+
+          <div class="amazon-prod">
+            <img src="images/hiraliy-drip.jpg" alt="">
+            <div>
+              <strong>HIRALIY Drip Kit</strong><br>
+              <a href="https://amzn.to/3JlKrSY" target="_blank">Buy on Amazon</a><br>
+              <em>click on the link and check out these products</em>
+            </div>
+          </div>
+
+          <div class="amazon-prod">
+            <img src="images/workpro-shear.jpg" alt="">
+            <div>
+              <strong>WORKPRO Grass Shear</strong><br>
+              <a href="https://amzn.to/3J4Icn3" target="_blank">Buy on Amazon</a><br>
+              <em>click on the link and check out these products</em>
+            </div>
+          </div>
+
+          <div class="amazon-prod">
+            <img src="images/veggie-seeds.jpg" alt="">
+            <div>
+              <strong>55 Vegetable Seeds Pack</strong><br>
+              <a href="https://amzn.to/4nesrYu" target="_blank">Buy on Amazon</a><br>
+              <em>click on the link and check out these products</em>
+            </div>
+          </div>
+
+          <div class="amazon-prod">
+            <img src="images/mini-chainsaw.jpg" alt="">
+            <div>
+              <strong>BIG RED 4″ Mini Chainsaw</strong><br>
+              <a href="https://amzn.to/4nWMWdr" target="_blank">Buy on Amazon</a><br>
+              <em>click on the link and check out these products</em>
+            </div>
+          </div>
+
         </div>
       </aside>
-    </section>
-    <!-- End: Posts Layout -->
+      <!-- End: Sidebar -->
+    </main>
+    <!-- End: Main -->
 
     <!-- Start: Footer -->
     <footer>
-      <img src="gwk-logo.png" alt="Gardening With Kev logo" style="width:72px;height:72px;border-radius:999px;object-fit:cover;margin-bottom:6px;"/>
+      <div style="margin-bottom:8px;">
+        <img src="gwk-logo.png"
+             alt="Gardening With Kev Logo"
+             style="width:90px; height:auto; border-radius:999px;">
+      </div>
       <div>© <span id="year"></span> Gardening With Kev</div>
       <div style="margin-top:4px">Made with love in Jamaica 🌴 by Gardening With Kev</div>
       <div style="font-size:12px;color:#666;margin-top:4px">
         As an Amazon Associate I earn from qualifying purchases.
       </div>
-      <div style="font-size:12px;color:#666;margin-top:4px">Last Updated: October 2025</div>
+      <div style="font-size:12px;color:#666;margin-top:4px">Last Updated: December 2025</div>
     </footer>
     <!-- End: Footer -->
   </div>
