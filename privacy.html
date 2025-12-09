@@ -23,15 +23,23 @@
       color:#111;
       line-height:1.6;
     }
+    a{
+      color:#2b6cb0;
+      text-decoration:none;
+    }
+    a:hover{text-decoration:underline;}
+
     .wrap{
       max-width:900px;
       margin:0 auto;
       padding:1.5rem 1rem 3rem;
     }
+
     header{
       text-align:center;
       margin-bottom:1.5rem;
     }
+
     h1{
       font-size:1.7rem;
       margin:0 0 .3rem;
@@ -44,17 +52,14 @@
     p,li{
       font-size:.95rem;
     }
+
     .card{
       background:#ffffff;
       padding:1.25rem 1.1rem 1.4rem;
       border-radius:12px;
       box-shadow:0 6px 18px rgba(15,23,42,0.06);
     }
-    a{
-      color:#2b6cb0;
-      text-decoration:none;
-    }
-    a:hover{text-decoration:underline;}
+
     footer{
       margin-top:2.2rem;
       font-size:.8rem;
@@ -62,8 +67,9 @@
       text-align:center;
     }
 
-    /* Back button styling */
-    .back-btn {
+    /* Buttons */
+    .back-btn,
+    .prev-btn {
       display:inline-block;
       background:#2b6cb0;
       color:#fff;
@@ -71,18 +77,82 @@
       border-radius:8px;
       text-decoration:none;
       font-weight:600;
-      margin:16px;
+      margin:10px 16px;
     }
-    .back-btn:hover {
+    .back-btn:hover,
+    .prev-btn:hover {
       background:#255a96;
     }
+
+    /* Banner (matches main site) */
+    .site-banner{
+      position:relative;
+      width:100%;
+      height:200px;
+      border-radius:0;
+      background-image:url('images/banner.jpg');
+      background-size:cover;
+      background-position:center;
+      box-shadow:0 6px 18px rgba(20,20,30,.05);
+      margin-bottom:24px;
+    }
+    .site-banner__overlay{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(0,0,0,.28), rgba(0,0,0,.18));
+    }
+    .site-banner__text{
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#fff;
+      font-weight:700;
+      letter-spacing:.2px;
+      font-size:clamp(20px,3.2vw,30px);
+      z-index:1;
+    }
+
+    /* Footer */
+    .gwk-footer{
+      margin-top:24px;
+      padding:18px 12px 22px;
+      text-align:center;
+      background:#f3f4f6;
+      color:#555;
+      font-size:13px;
+    }
+    .gwk-footer-logo-wrap{
+      margin-bottom:6px;
+    }
+    .gwk-footer-logo{
+      width:72px;
+      height:72px;
+      border-radius:999px;
+      object-fit:cover;
+    }
+    .gwk-footer-small{
+      margin-top:4px;
+      font-size:11px;
+      color:#777;
+    }
+
   </style>
 </head>
 
 <body>
 
-  <!-- ✅ Back to Home Button -->
+  <!-- Full-width banner (matches your home page) -->
+  <section class="site-banner">
+    <div class="site-banner__overlay"></div>
+    <div class="site-banner__text">Privacy Policy</div>
+  </section>
+
+  <!-- Back buttons -->
   <a href="index.html" class="back-btn">← Back to Home</a>
+  <a href="javascript:history.back()" class="prev-btn">← Back to Previous Page</a>
 
   <div class="wrap">
     <header>
@@ -93,92 +163,80 @@
     <div class="card">
       <h2>1. Who runs this site</h2>
       <p>
-        This blog, <strong>Gardening With Kev</strong>, is a personal site where I share my own
-        gardening experiences, photos and opinions. It is not owned or managed by Amazon or Google.
+        This blog, <strong>Gardening With Kev</strong>, is a personal site where I share gardening experiences, photos and opinions.
       </p>
 
       <h2>2. Amazon Associate disclosure</h2>
       <p>
         Gardening With Kev participates in the <strong>Amazon Associates Program</strong>.
-        This means that when you click on certain links to Amazon and make a purchase, I may
-        earn a small commission at no extra cost to you.
-      </p>
-      <p>
-        You will usually see phrases like <em>&ldquo;As an Amazon Associate I earn from qualifying
-        purchases&rdquo;</em> near these links, or a disclosure in the same section as the products.
+        When you click certain Amazon links and make a purchase, I may earn a commission.
       </p>
 
       <h2>3. What information is collected</h2>
-      <p>
-        I do not ask you to create an account or log in to use this blog. However, some basic
-        information may be collected automatically when you visit the site:
-      </p>
       <ul>
-        <li>Pages visited and time spent on the site</li>
-        <li>Approximate location (country/city) based on your IP address</li>
-        <li>Device, browser and operating system information</li>
-        <li>Referring websites or links</li>
+        <li>Pages visited and time spent</li>
+        <li>Approximate location via IP</li>
+        <li>Device and browser details</li>
       </ul>
 
       <h2>4. Google Analytics</h2>
       <p>
-        This site uses <strong>Google Analytics</strong> to understand how visitors use the blog,
-        such as which pages are most popular and what type of device people are using. Google
-        Analytics uses cookies and similar technologies to collect this information.
-      </p>
-      <p>
-        The data collected is used in an aggregated way (for example, total number of visitors,
-        most visited pages). I do not use Google Analytics to collect or store any personally
-        identifiable information such as your name or address.
-      </p>
-      <p>
-        You can learn more about how Google uses data from sites that use their services by
-        visiting Google’s own privacy pages, and you can adjust or block cookies in
-        your browser settings if you prefer.
+        This site uses Google Analytics to understand how visitors use the site. No personally identifiable information is stored.
       </p>
 
-      <h2>5. Amazon cookies and tracking</h2>
+      <h2>5. Amazon cookies</h2>
       <p>
-        When you click on an Amazon link on this site, Amazon may place cookies or use other
-        tracking technologies to understand that you came from Gardening With Kev. This is
-        how they know whether to credit any qualifying purchases to this site.
-      </p>
-      <p>
-        These cookies are controlled by Amazon, not by Gardening With Kev. For more information
-        on how Amazon handles data and cookies, please refer to their privacy notices and cookie
-        policies on Amazon’s websites.
+        Amazon may use cookies to track affiliate clicks. These cookies are controlled by Amazon.
       </p>
 
       <h2>6. Third-party links</h2>
       <p>
-        This blog sometimes links to other websites (for example, YouTube, Amazon or other
-        gardening resources). I am not responsible for the content or privacy practices of
-        those external sites. Please review their own privacy policies if you have any questions.
+        This site links to external websites. Their privacy practices may differ.
       </p>
 
       <h2>7. Your choices</h2>
       <ul>
-        <li>You can choose not to click on any affiliate links if you prefer not to support the site.</li>
-        <li>You can adjust your browser settings to block or delete cookies.</li>
-        <li>You can use browser tools that limit analytics tracking.</li>
+        <li>Avoid clicking affiliate links</li>
+        <li>Disable or clear cookies in your browser</li>
+        <li>Use privacy tools to block analytics</li>
       </ul>
 
       <h2>8. Contact</h2>
       <p>
-        If you have questions about this privacy policy, you can reach me through the contact options on the
+        If you have questions, please reach me through the contact section on the 
         <a href="index.html#contact">Gardening With Kev home page</a>.
       </p>
 
-      <h2>9. Changes to this policy</h2>
+      <h2>9. Updates</h2>
       <p>
-        Any updates will be posted here with a new “Updated” date at the top of the page.
+        This page may be updated over time. Changes will be noted at the top.
       </p>
     </div>
 
-    <footer>
-      &copy; <span id="year"></span> Gardening With Kev – Privacy Policy
-    </footer>
   </div>
+
+  <!-- GWK Footer (matching the main site) -->
+  <footer class="gwk-footer">
+    <div class="gwk-footer-logo-wrap">
+      <img src="gwk-logo.png" class="gwk-footer-logo" alt="Gardening With Kev Logo">
+    </div>
+
+    <div>© <span id="year"></span> Gardening With Kev</div>
+
+    <div class="gwk-footer-small" style="margin-top:6px;">
+      <a href="privacy.html" style="color:#2b6cb0; text-decoration:none;">
+        Privacy Policy
+      </a>
+    </div>
+
+    <div class="gwk-footer-small">
+      As an Amazon Associate I earn from qualifying purchases.
+    </div>
+
+    <div class="gwk-footer-small">
+      Last Updated: December 2025
+    </div>
+  </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
