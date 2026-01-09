@@ -8,10 +8,15 @@
   <meta http-equiv="refresh" content="0; url=https://linktr.ee/kevingfos">
 
   <script>
-    window.addEventListener('DOMContentLoaded', function() {
-      try { window.location.replace("https://linktr.ee/kevingfos"); }
-      catch(e) { window.location.href = "https://linktr.ee/kevingfos"; }
-    });
+    function doRedirect() {
+      // Direct replacement is the most reliable method
+      window.location.replace("https://linktr.ee/kevingfos");
+    }
+    
+    // Run the redirect as soon as the window starts loading
+    window.onload = function() {
+      setTimeout(doRedirect, 100); 
+    };
   </script>
 
   <style>
@@ -31,21 +36,20 @@
       text-decoration: none; 
       font-weight: 600;
       box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
     }
-    a:hover { transform: translateY(-2px); border-color: #2b6cb0; }
+    a:hover { background: #f1f5f9; }
   </style>
 </head>
 
 <body>
   <div class="container">
     <h1>Redirecting…</h1>
-    <p>If you are not moved automatically, please select a destination below:</p>
+    <p>Moving you to my contact links. If nothing happens, tap below:</p>
 
     <div class="links">
       <a href="https://linktr.ee/kevingfos">🔗 Open Linktree</a>
-      <a href="https://www.amazon.com/stores/K.-G.-Foster/author/B0GDWMTPNG" target="_blank">📚 My Amazon Author Page</a>
-      <a href="https://www.youtube.com/@gardeningwithkev" target="_blank">🎥 Visit YouTube</a>
+      <a href="https://www.amazon.com/stores/K.-G.-Foster/author/B0GDWMTPNG">📚 My Amazon Author Page</a>
+      <a href="https://www.youtube.com/@gardeningwithkev">🎥 Visit YouTube</a>
     </div>
   </div>
 </body>
