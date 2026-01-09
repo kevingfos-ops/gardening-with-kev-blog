@@ -3,219 +3,60 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>About – Gardening With Kev</title>
+<title>New Year Garden Resolutions – Gardening With Kev</title>
 <link href="favicon.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="favicon.ico" rel="shortcut icon"/>
 <style>
-    body{
-      font-family: Inter, system-ui, sans-serif;
-      margin:0;
-      background:#f7f7f8;
-      color:#111;
-      line-height:1.6;
-    }
-    .container{
-      max-width:900px;
-      margin:20px auto;
-      padding:0 16px;
-    }
-
-    /* Header */
-    .gwk-site-header{
-      background:#fff;
-      border-bottom:1px solid rgba(0,0,0,0.06);
-      box-shadow:0 2px 4px rgba(0,0,0,0.04);
-      padding:10px 16px;
-    }
-    .gwk-header-inner{
-      max-width:1100px;
-      margin:0 auto;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-    }
-    .gwk-brand{
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-    .gwk-logo{
-      width:48px;
-      height:48px;
-      border-radius:999px;
-      object-fit:cover;
-    }
-    .gwk-site-title{
-      font-weight:800;
-      font-size:16px;
-    }
-    .gwk-tagline{
-      font-size:12px;
-      color:#2f6e3f;
-    }
-    .gwk-nav a{
-      margin-left:10px;
-      font-size:13px;
-      color:#555;
-      text-decoration:none;
-    }
-    .gwk-nav a:hover{ color:#000; }
-
-    /* About Page Styling */
-    .about-title{
-      font-size:28px;
-      font-weight:800;
-      margin-top:20px;
-      color:#2f6e3f;
-      text-align:center;
-    }
-    .about-section{
-      background:#fff;
-      padding:24px;
-      border-radius:12px;
-      box-shadow:0 6px 18px rgba(20,20,30,.05);
-      margin-bottom:20px;
-    }
-    .about-section h2{
-      margin-top:0;
-      color:#2f6e3f;
-    }
-    .about-section ul{
-      margin-top:6px;
-      margin-bottom:12px;
-      padding-left:20px;
-    }
-    
-    /* Author Highlight Style */
-    .author-highlight {
-      background: #f0f7ff;
-      border-left: 5px solid #2b6cb0;
-    }
-
-    .btn-author {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 18px;
-      background: #2b6cb0;
-      color: #fff !important;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    /* Footer */
-    .gwk-footer{
-      margin-top:24px;
-      padding:20px 12px;
-      text-align:center;
-      background:#f3f4f6;
-      color:#555;
-      font-size:13px;
-    }
-    .gwk-footer-logo{
-      width:72px;
-      height:72px;
-      border-radius:999px;
-      object-fit:cover;
-      margin-bottom:6px;
-    }
-
-    @media (max-width:600px){
-      .gwk-header-inner{
-        flex-direction:column;
-        align-items:flex-start;
-      }
-      .gwk-nav a{
-        margin-left:0;
-        margin-right:10px;
-      }
-    }
-  </style>
+    :root{--accent:#2b6cb0;--green:#2f9e44;--bg:#f7f7f8;--text:#111;}
+    body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);margin:0;padding:0;line-height:1.6}
+    .container{max-width:800px;margin:28px auto;padding:0 18px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;background:#fff;padding:15px;border-radius:12px;box-shadow:0 2px 5px rgba(0,0,0,0.05)}
+    .logo{width:50px;height:50px;border-radius:999px}
+    nav a{margin-left:12px;text-decoration:none;color:#666;font-weight:500;font-size:14px}
+    .post-card{background:#fff;padding:30px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.05)}
+    h1{color:var(--green);margin-top:0}
+    .article-img{width:100%;max-width:480px;display:block;margin:25px auto;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.1)}
+    .img-caption{text-align:center;font-size:13px;color:#666;margin-top:-15px;margin-bottom:25px;font-style:italic}
+    footer{text-align:center;margin-top:40px;padding:20px;color:#666;font-size:14px}
+    .btn{display:inline-block;padding:12px 20px;background:var(--green);color:#fff;text-decoration:none;border-radius:8px;font-weight:600;margin-top:20px}
+</style>
 </head>
 <body>
-<div class="gwk-site-header">
-<div class="gwk-header-inner">
-<div class="gwk-brand">
-<img alt="Gardening With Kev Logo" class="gwk-logo" src="gwk-logo.png"/>
-<div>
-<div class="gwk-site-title">Gardening With Kev</div>
-<div class="gwk-tagline">Simple, natural gardening inspired by Jamaica</div>
-</div>
-</div>
-<nav class="gwk-nav">
-  <a href="index.html">Home</a>
-  <a href="index.html#posts">Posts</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-  <a href="books.html">Books &amp; eBooks</a>
-</nav>
-</div>
-</div>
-
 <div class="container">
-<h1 class="about-title">About Gardening With Kev</h1>
+    <header>
+        <div style="display:flex;align-items:center;gap:10px">
+            <img src="gwk-logo.png" class="logo" alt="Logo">
+            <span style="font-weight:800">Gardening With Kev</span>
+        </div>
+        <nav><a href="index.html">Home</a><a href="about.html">About</a><a href="books.html">Books</a></nav>
+    </header>
 
-<div class="about-section">
-  <div style="text-align:center;margin-bottom:16px;">
-    <img alt="Kevin – Gardening With Kev" src="images/kev-circle.png" style="width:120px;height:120px;border-radius:999px;object-fit:cover;"/>
-  </div>
-  <h2>Hi, I’m Kevin</h2>
-  <p>I’m a Jamaican who loves plants, and I started my home garden using whatever I had available — simple, practical, and convenient. Most of my gardening is done right where I live — in pots, buckets, recycled containers, and anything else I can find.</p>
-  <p><strong>Gardening With Kev</strong> is my space to share what I’m learning as I grow: what works, what doesn’t, and the small wins that keep me excited about plants.</p>
+    <article class="post-card">
+        <h1>🌿 Make the Resolution to Start Your Own Home Garden</h1>
+        <p>As we enter the new year and we start to make new years resolutions. I want to encourage you to start your own home garden.</p>
+
+        <img src="1767985899470.jpeg" class="article-img" alt="Healthy tomato plants in recycled container">
+        <div class="img-caption">Healthy growth is possible even in recycled household containers.</div>
+
+        <p>I know what a lot of you will say: <em>"I don't have the space"</em> or <em>"I don't have the time to take on a gardening project"</em> or some people will say <em>"I don't have a green thumb—things I plant never grow."</em></p>
+
+        <p>It might not be you but the <strong>soil</strong> you are planting in; it can also be the <strong>seeds or planting materials</strong> you are using.</p>
+
+        <img src="1767985332265.jpeg" class="article-img" alt="Tomato seedlings in a blue-capped bottle">
+        <div class="img-caption">Starting small with a simple water bottle is where it all begins.</div>
+
+        <p>Apart from the joy you get from planting something and seeing it grow, look at the prices in the markets—especially after the hurricane.</p>
+
+        <p>You don't have to start big; you can start from a few seeds and a container that you can keep on your verandah or balcony if where you live is a problem.</p>
+
+        <img src="1767985911723.jpeg" class="article-img" alt="Young pepper plants in a container">
+        <div class="img-caption">These young pepper plants show that any space can be a garden.</div>
+
+        <p>Let's make this the year we grow together. Start right where you are!</p>
+        <a href="index.html" class="btn">← Back to Home</a>
+    </article>
+
+    <footer>© <span id="year"></span> Gardening With Kev | Jamaica 🌴</footer>
 </div>
-
-<div class="about-section author-highlight">
-  <h2>From Garden to Books</h2>
-  <p>My passion for simple gardening led me to become a published author. I’ve written several guides and eBooks designed to help you master natural gardening techniques, no matter how much space you have.</p>
-  <p>Whether you're looking for deep dives into specific plants or a complete guide to starting your own Jamaican-inspired garden, my books provide the step-by-step help you need.</p>
-  <a href="books.html" class="btn-author">View My Books & eBooks</a>
-  <a href="https://www.amazon.com/author/kevin-foster" target="_blank" class="btn-author" style="background:#111; margin-left:10px;">Visit My Amazon Author Page</a>
-</div>
-
-<div class="about-section">
-<h2>How Gardening With Kev Started</h2>
-<p>This blog started from a simple idea: you don’t need a big yard, fancy flower pots, or expensive tools to grow healthy plants. Instead of answering questions one by one, I decided to document the journey here with real photos and experiments from my yard in Jamaica.</p>
-</div>
-
-<div class="about-section">
-<h2>My Gardening Style</h2>
-<ul>
-<li>Simple – Use what you have first.</li>
-<li>Natural – Prefer gentle, plant-friendly methods where possible.</li>
-<li>Practical – Focus on what works in real Jamaican conditions.</li>
-<li>Honest – If something fails, I’ll say so. If it works, I’ll show you.</li>
-</ul>
-</div>
-
-<div class="about-section">
-<h2>Connect With Me Online</h2>
-<ul>
-<li>YouTube: Gardening With Kev</li>
-<li>Amazon Author Page: Kevin Foster</li>
-<li>Linktree: kevingfos</li>
-</ul>
-</div>
-
-<div class="about-section">
-<h2>Final Word</h2>
-<p>Whether you have a big yard or just a small corner with a bucket, I believe you can grow something. Let’s grow together, one simple planting at a time. 🌿</p>
-</div>
-</div>
-
-<footer class="gwk-footer">
-  <img alt="Gardening With Kev Logo" class="gwk-footer-logo" src="gwk-logo.png"/>
-  <div>© <span id="gwk-year"></span> Gardening With Kev</div>
-  <div class="gwk-footer-line">Made with love in Jamaica 🌴 by Gardening With Kev</div>
-  <div class="gwk-footer-small" style="margin-top:6px;">
-    <a href="privacy.html" style="color:#2b6cb0; text-decoration:none;">Privacy Policy</a> | 
-    <a href="contact.html" style="color:#2b6cb0; text-decoration:none;">Contact</a>
-  </div>
-  <div class="gwk-footer-small">As an Amazon Associate I earn from qualifying purchases.</div>
-</footer>
-
-<script>
-  document.getElementById('gwk-year').textContent = new Date().getFullYear();
-</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
