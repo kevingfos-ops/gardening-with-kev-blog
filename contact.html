@@ -15,16 +15,38 @@
   </script>
 
   <style>
-    body { font-family: system-ui; padding: 30px; background: #f8fafc; }
-    a { font-size: 18px; }
+    body { font-family: system-ui, -apple-system, sans-serif; padding: 40px 20px; background: #f8fafc; color: #334155; text-align: center; }
+    .container { max-width: 400px; margin: 0 auto; }
+    h1 { font-size: 24px; margin-bottom: 10px; }
+    p { margin-bottom: 20px; color: #64748b; }
+    .links { display: flex; flex-direction: column; gap: 12px; }
+    a { 
+      display: block; 
+      padding: 14px; 
+      background: #fff; 
+      border: 1px solid #e2e8f0; 
+      border-radius: 12px; 
+      font-size: 16px; 
+      color: #2b6cb0; 
+      text-decoration: none; 
+      font-weight: 600;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    a:hover { transform: translateY(-2px); border-color: #2b6cb0; }
   </style>
 </head>
 
 <body>
-  <h1>Redirecting…</h1>
-  <p>If you are not redirected automatically, tap below:</p>
+  <div class="container">
+    <h1>Redirecting…</h1>
+    <p>If you are not moved automatically, please select a destination below:</p>
 
-  <p><a href="https://linktr.ee/kevingfos">Open Linktree</a></p>
-  <p><a href="https://www.youtube.com/@gardeningwithkev">Fallback: Visit YouTube</a></p>
+    <div class="links">
+      <a href="https://linktr.ee/kevingfos">🔗 Open Linktree</a>
+      <a href="https://www.amazon.com/stores/K.-G.-Foster/author/B0GDWMTPNG" target="_blank">📚 My Amazon Author Page</a>
+      <a href="https://www.youtube.com/@gardeningwithkev" target="_blank">🎥 Visit YouTube</a>
+    </div>
+  </div>
 </body>
 </html>
