@@ -7,139 +7,31 @@
 <link href="favicon.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="favicon.ico" rel="shortcut icon"/>
 <style>
-    body{
-      font-family: Inter, system-ui, sans-serif;
-      margin:0;
-      background:#f7f7f8;
-      color:#111;
-      line-height:1.6;
-    }
-    .container{
-      max-width:900px;
-      margin:20px auto;
-      padding:0 16px;
-    }
-
-    /* Header */
-    .gwk-site-header{
-      background:#fff;
-      border-bottom:1px solid rgba(0,0,0,0.06);
-      box-shadow:0 2px 4px rgba(0,0,0,0.04);
-      padding:10px 16px;
-    }
-    .gwk-header-inner{
-      max-width:1100px;
-      margin:0 auto;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-    }
-    .gwk-brand{
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-    .gwk-logo{
-      width:48px;
-      height:48px;
-      border-radius:999px;
-      object-fit:cover;
-    }
-    .gwk-site-title{
-      font-weight:800;
-      font-size:16px;
-    }
-    .gwk-tagline{
-      font-size:12px;
-      color:#2f6e3f;
-    }
-    .gwk-nav a{
-      margin-left:10px;
-      font-size:13px;
-      color:#555;
-      text-decoration:none;
-    }
+    body{ font-family: Inter, system-ui, sans-serif; margin:0; background:#f7f7f8; color:#111; line-height:1.6; }
+    .container{ max-width:900px; margin:20px auto; padding:0 16px; }
+    .gwk-site-header{ background:#fff; border-bottom:1px solid rgba(0,0,0,0.06); box-shadow:0 2px 4px rgba(0,0,0,0.04); padding:10px 16px; }
+    .gwk-header-inner{ max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .gwk-brand{ display:flex; align-items:center; gap:10px; }
+    .gwk-logo{ width:48px; height:48px; border-radius:999px; object-fit:cover; }
+    .gwk-site-title{ font-weight:800; font-size:16px; }
+    .gwk-tagline{ font-size:12px; color:#2f6e3f; }
+    .gwk-nav a{ margin-left:10px; font-size:13px; color:#555; text-decoration:none; }
     .gwk-nav a:hover{ color:#000; }
-
-    /* About Page Styling */
-    .about-title{
-      font-size:28px;
-      font-weight:800;
-      margin-top:20px;
-      color:#2f6e3f;
-      text-align:center;
-    }
-    .about-section{
-      background:#fff;
-      padding:24px;
-      border-radius:12px;
-      box-shadow:0 6px 18px rgba(20,20,30,.05);
-      margin-bottom:20px;
-    }
-    .about-section h2{
-      margin-top:0;
-      color:#2f6e3f;
-    }
-    .about-section ul{
-      margin-top:6px;
-      margin-bottom:12px;
-      padding-left:20px;
-    }
-
-    /* Author Highlight */
-    .author-highlight {
-      background: #f0f7ff;
-      border-left: 5px solid #2b6cb0;
-    }
-    .btn-author {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 18px;
-      background: #2b6cb0;
-      color: #fff !important;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 14px;
-      text-decoration:none;
-    }
-    .btn-author-black {
-      background: #111;
-      margin-left: 8px;
-    }
-
-    /* Footer */
-    .gwk-footer{
-      margin-top:24px;
-      padding:20px 12px;
-      text-align:center;
-      background:#f3f4f6;
-      color:#555;
-      font-size:13px;
-    }
-    .gwk-footer-logo{
-      width:72px;
-      height:72px;
-      border-radius:999px;
-      object-fit:cover;
-      margin-bottom:6px;
-    }
-
+    .about-title{ font-size:28px; font-weight:800; margin-top:20px; color:#2f6e3f; text-align:center; }
+    .about-section{ background:#fff; padding:24px; border-radius:12px; box-shadow:0 6px 18px rgba(20,20,30,.05); margin-bottom:20px; }
+    .about-section h2{ margin-top:0; color:#2f6e3f; }
+    .about-section ul{ margin-top:6px; margin-bottom:12px; padding-left:20px; }
+    .author-highlight { background: #f0f7ff; border-left: 5px solid #2b6cb0; }
+    .btn-author { display: inline-block; margin-top: 10px; padding: 10px 18px; background: #2b6cb0; color: #fff !important; border-radius: 8px; font-weight: 700; font-size: 14px; text-decoration:none; }
+    .btn-author-black { background: #111; margin-left: 8px; }
+    .gwk-footer{ margin-top:24px; padding:20px 12px; text-align:center; background:#f3f4f6; color:#555; font-size:13px; }
+    .gwk-footer-logo{ width:72px; height:72px; border-radius:999px; object-fit:cover; margin-bottom:6px; }
     @media (max-width:600px){
-      .gwk-header-inner{
-        flex-direction:column;
-        align-items:flex-start;
-      }
-      .gwk-nav a{
-        margin-left:0;
-        margin-right:10px;
-      }
-      .btn-author-black {
-        margin-left: 0;
-        margin-top: 10px;
-      }
+      .gwk-header-inner{ flex-direction:column; align-items:flex-start; }
+      .gwk-nav a{ margin-left:0; margin-right:10px; }
+      .btn-author-black { margin-left: 0; margin-top: 10px; }
     }
-  </style>
+</style>
 </head>
 <body>
 <div class="gwk-site-header">
@@ -164,10 +56,13 @@
 <div class="container">
 <h1 class="about-title">About Gardening With Kev</h1>
 
-<div class="about-section"><div style="text-align:center;margin-bottom:16px;"><img alt="Kevin – Gardening With Kev" src="images/kev-circle.png" style="width:120px;height:120px;border-radius:999px;object-fit:cover;"/></div>
-<h2>Hi, I’m Kevin</h2>
-<p>I’m a Jamaican who loves plants, and I started my home garden using whatever I had available — simple, practical, and convenient. Most of my gardening is done right where I live — in pots, buckets, recycled containers, cut-off bottles, and anything else I can find.</p>
-<p><strong>Gardening With Kev</strong> is my space to share what I’m learning as I grow: what works, what doesn’t, and the small wins that keep me excited about plants — and to share that journey with others.</p>
+<div class="about-section">
+  <div style="text-align:center;margin-bottom:16px;">
+    <img alt="Kevin" src="images/kev-circle.png" style="width:120px;height:120px;border-radius:999px;object-fit:cover;"/>
+  </div>
+  <h2>Hi, I’m Kevin</h2>
+  <p>I’m a Jamaican who loves plants, and I started my home garden using whatever I had available — simple, practical, and convenient. Most of my gardening is done right where I live — in pots, buckets, recycled containers, cut-off bottles, and anything else I can find.</p>
+  <p><strong>Gardening With Kev</strong> is my space to share what I’m learning as I grow: what works, what doesn’t, and the small wins that keep me excited about plants — and to share that journey with others.</p>
 </div>
 
 <div class="about-section author-highlight">
@@ -179,7 +74,7 @@
     </ul>
     <p>You can find more details about these on my books page or visit my official author profile on Amazon.</p>
     <a href="books.html" class="btn-author">View My Books</a>
-    <a href="https://www.amazon.com/author/kevin-foster" target="_blank" class="btn-author btn-author-black">Amazon Author Page</a>
+    <a href="https://www.amazon.com/stores/K.-G.-Foster/author/B0GDWMTPNG" target="_blank" class="btn-author btn-author-black">Amazon Author Page</a>
 </div>
 
 <div class="about-section">
@@ -211,6 +106,13 @@
 <li>Pineapples</li>
 <li>Various flowers</li>
 </ul>
+<p><strong>Plants I want to start growing:</strong></p>
+<ul>
+<li>Peppers</li>
+<li>Tomatoes</li>
+<li>Cucumbers</li>
+<li>Herbs and other yard favourites</li>
+</ul>
 </div>
 
 <div class="about-section">
@@ -228,50 +130,4 @@
 
 <div class="about-section">
 <h2>About Product Links &amp; Amazon</h2>
-<p>Some posts include links to tools, seeds, and gardening items.</p>
-<p>I’m an Amazon Associate, which means:</p>
-<ul>
-<li>If you click on the link and check out these products and decide to buy,</li>
-<li>I may earn a small commission,</li>
-<li>At no extra cost to you.</li>
-</ul>
-</div>
-
-<div class="about-section">
-<h2>Connect With Me Online</h2>
-<p>If you’d like to see more of what I’m doing or send a message, you can find me here:</p>
-<ul>
-<li>YouTube: Gardening With Kev</li>
-<li>Linktree: kevingfos</li>
-<li>Instagram / TikTok: Gardening With Kev</li>
-</ul>
-</div>
-
-<div class="about-section">
-<h2>Final Word</h2>
-<p>Whether you have a big yard, a verandah, or just a small corner with a bucket and a bottle, I believe you can grow something.</p>
-<p>Thanks for visiting <strong>Gardening With Kev</strong>.</p>
-<p>Let’s grow together, one simple planting at a time. 🌿</p>
-</div>
-</div>
-
-<footer class="gwk-footer">
-  <img alt="Gardening With Kev Logo" class="gwk-footer-logo" src="gwk-logo.png"/>
-  <div>© <span id="gwk-year"></span> Gardening With Kev</div>
-  <div class="gwk-footer-line">
-    Made with love in Jamaica 🌴 by Gardening With Kev
-  </div>
-  <div class="gwk-footer-small" style="margin-top:6px;">
-    <a href="privacy.html" style="color:#2b6cb0; text-decoration:none;">Privacy Policy</a> | 
-    <a href="contact.html" style="color:#2b6cb0; text-decoration:none;">Contact</a>
-  </div>
-  <div class="gwk-footer-small">
-    As an Amazon Associate I earn from qualifying purchases.
-  </div>
-</footer>
-
-<script>
-  document.getElementById('gwk-year').textContent = new Date().getFullYear();
-</script>
-</body>
-</html>
+<p>Some posts include links to tools, seeds, and gardening items.</
