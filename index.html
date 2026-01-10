@@ -1,64 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JL4D4ENVQQ"></script>
+
+<!-- Google tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JL4D4ENVQQ"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-JL4D4ENVQQ');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JL4D4ENVQQ');
 </script>
+
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Gardening With Kev</title>
-<meta content="Gardening With Kev – Simple, natural gardening inspired by Jamaica." name="description"/>
-<link href="favicon.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="favicon.ico" rel="shortcut icon"/>
+<meta name="description" content="Gardening With Kev – Simple, natural gardening inspired by Jamaica."/>
+<link rel="icon" href="favicon.png" sizes="32x32" type="image/png"/>
+<link rel="shortcut icon" href="favicon.ico"/>
 
 <style>
-    :root{--accent:#2b6cb0;--muted:#666;--green:#2f9e44;--card:#ffffff;--bg:#f7f7f8;--text:#111;}
-    *{box-sizing:border-box}
-    body{font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);margin:0;padding:0;line-height:1.5}
-    .container{max-width:1100px;margin:28px auto;padding:0 18px}
-    a{text-decoration:none;color:var(--accent)}
-    header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:80px;height:auto;border-radius:999px}
-    .tagline{color:#2f6e3f;font-size:13px;margin-top:2px}
-    nav a{margin-left:12px;color:var(--muted);font-weight:500}
-    nav a:hover{color:#000}
-    
-    .hero{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:22px}
-    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,.05);margin-bottom:20px}
-    .post h2{margin:0 0 6px;color:var(--green)}
-    .date{color:var(--muted);font-size:13px;margin-bottom:10px}
-    
-    .post img.main{width:100%;max-width:480px;height:auto;border-radius:12px;margin:10px auto 15px;display:block}
-    
-    .yt-embed{width:100%;height:180px;border-radius:8px;border:0;margin-bottom:10px}
-    .btn{display:inline-block;padding:10px 12px;border-radius:8px;text-align:center;background:#2b6cb0;color:#fff;font-weight:600;font-size:14px;width:100%}
-    .btn-yt{background:#e53935}.btn-linktree{background:#111}
-    
-    .about{display:flex;gap:12px;align-items:center}
-    .about img{width:64px;height:64px;border-radius:999px;object-fit:cover}
-    
-    .amazon-prod{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px}
-    .amazon-prod img{width:80px;height:80px;object-fit:cover;border-radius:8px}
-    .amazon-prod em{font-size:11px;color:#888;display:block;margin-top:2px}
-    
-    .site-banner{position:relative;width:100%;height:280px;border-radius:12px;margin:18px 0;background-image:url('images/banner.jpg');background-size:cover;background-position:center}
-    .site-banner__overlay{position:absolute;inset:0;border-radius:12px;background:rgba(0,0,0,.2)}
-    .site-banner__text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:clamp(18px,3vw,26px);z-index:1;text-align:center}
-    
-    footer{margin:40px 0;text-align:center;color:#666;font-size:14px;border-top:1px solid #ddd;padding-top:20px}
-    @media (max-width:880px){.hero{grid-template-columns:1fr}}
+:root{--accent:#2b6cb0;--muted:#666;--green:#2f9e44;--card:#ffffff;--bg:#f7f7f8;--text:#111;}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);margin:0;line-height:1.5}
+.container{max-width:1100px;margin:28px auto;padding:0 18px}
+a{text-decoration:none;color:var(--accent)}
+header{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:80px;border-radius:999px}
+.tagline{color:#2f6e3f;font-size:13px}
+nav a{margin-left:12px;color:var(--muted);font-weight:500}
+nav a:hover{color:#000}
+
+.hero{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:22px}
+.card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,.05);margin-bottom:20px}
+.post h2{margin:0 0 6px;color:var(--green)}
+.date{color:var(--muted);font-size:13px;margin-bottom:10px}
+.post img.main{width:100%;max-width:480px;border-radius:12px;margin:10px auto 15px;display:block}
+
+.yt-embed{width:100%;height:180px;border-radius:8px;border:0;margin-bottom:10px}
+.btn{display:inline-block;padding:10px 12px;border-radius:8px;background:#2b6cb0;color:#fff;font-weight:600;font-size:14px;width:auto}
+.btn-yt{background:#e53935}
+.btn-linktree{background:#111}
+
+.about{display:flex;gap:12px;align-items:center}
+.about img{width:64px;height:64px;border-radius:999px;object-fit:cover}
+
+.amazon-prod{display:flex;gap:12px;margin-bottom:12px}
+.amazon-prod img{width:80px;height:80px;border-radius:8px}
+.amazon-prod em{font-size:11px;color:#888;display:block}
+
+.site-banner{height:280px;border-radius:12px;margin:18px 0;background:url('images/banner.jpg') center/cover;position:relative}
+.site-banner__overlay{position:absolute;inset:0;background:rgba(0,0,0,.25);border-radius:12px}
+.site-banner__text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:clamp(18px,3vw,26px);text-align:center}
+
+footer{text-align:center;color:#666;font-size:14px;border-top:1px solid #ddd;padding-top:20px;margin-top:40px}
+@media(max-width:880px){.hero{grid-template-columns:1fr}}
 </style>
 </head>
+
 <body>
 <div class="container">
-<header id="top">
+
+<header>
   <div class="brand">
-    <img class="logo" src="gwk-logo.png" alt="Logo"/>
+    <img src="gwk-logo.png" class="logo" alt="Gardening With Kev logo"/>
     <div>
       <div style="font-weight:800">Gardening With Kev</div>
       <div class="tagline">Simple, natural gardening inspired by Jamaica</div>
@@ -79,112 +84,146 @@
 </section>
 
 <main class="hero">
-  <section id="posts">
-    <article class="card post">
-      <h2>🌿 Make the Resolution to Start Your Own Home Garden</h2>
-      <div class="date">Posted January 2026</div>
-      <img class="main" src="Tomatoes in 5 gallon bottle.jpeg" alt="Healthy tomato plants in a recycled container"/>
-      <p>As we enter the new year, I want to encourage you to start your own home garden. Don't let space or "green thumbs" stop you—you can start right on your verandah...</p>
-      <a class="btn" href="new-year-garden.html" style="width:auto">Read the New Year guide</a>
-    </article>
+<section id="posts">
 
-    <article class="card post">
-      <h2>🌿 Aloe Vera: The Healing Plant Every Home Should Have</h2>
-      <div class="date">Posted October 2025</div>
-      <img class="main" src="images/aloe-vera.jpg" alt="Aloe Vera"/>
-      <p>Aloe Vera is one of the most useful and low-maintenance plants you can grow...</p>
-      <a class="btn" href="aloe-vera.html" style="width:auto">Read the full Aloe guide</a>
-    </article>
+<article class="card post">
+<h2>🌿 Make the Resolution to Start Your Own Home Garden</h2>
+<div class="date">Posted January 2026</div>
+<img class="main" src="images/tomatoes-5-gallon.jpg" alt="Tomato plants growing in a recycled container"/>
+<p>As we enter the new year, I want to encourage you to start your own home garden. Don't let space or “green thumbs” stop you—you can start right on your verandah.</p>
+<a class="btn" href="new-year-garden.html">Read the New Year guide</a>
+</article>
 
-    <article class="card post">
-      <h2>🌿 The Life Plant and Its Healing Power</h2>
-      <div class="date">Posted October 2025</div>
-      <img class="main" src="images/life-plant.jpg" alt="Life Plant"/>
-      <p>The Life Plant, also called Wonder of the World, is famous for its ability to grow new plants from its leaves...</p>
-      <a class="btn" href="life-plant.html" style="width:auto">Read the full Life Plant guide</a>
-    </article>
+<article class="card post">
+<h2>🌿 Aloe Vera: The Healing Plant Every Home Should Have</h2>
+<div class="date">Posted October 2025</div>
+<img class="main" src="images/aloe-vera.jpg" alt="Aloe Vera plant"/>
+<p>Aloe Vera is one of the most useful and low-maintenance plants you can grow.</p>
+<a class="btn" href="aloe-vera.html">Read the full Aloe guide</a>
+</article>
 
-    <article class="card post">
-      <h2>🍍 How I Planted Pineapples at Home</h2>
-      <div class="date">Posted November 2025</div>
-      <img class="main" src="Pineapple from tops planted in full sun.jpg" alt="Pineapple"/>
-      <p>I planted pineapples using tops from market fruits, and the results have been amazing...</p>
-      <a class="btn" href="pineapple.html" style="width:auto">Read the full pineapple guide</a>
-    </article>
+<article class="card post">
+<h2>🌿 The Life Plant and Its Healing Power</h2>
+<div class="date">Posted October 2025</div>
+<img class="main" src="images/life-plant.jpg" alt="Life Plant"/>
+<p>The Life Plant, also called Wonder of the World, is famous for its ability to grow new plants from its leaves.</p>
+<a class="btn" href="life-plant.html">Read the full Life Plant guide</a>
+</article>
 
-    <article class="card post">
-      <h2>🌱 Planting in Containers</h2>
-      <div class="date">Posted October 2025</div>
-      <img class="main" src="images/container-01.jpg" alt="Containers"/>
-      <p>At home, I’ve planted flowers, fever grass, aloe vera and more in simple containers. It’s affordable and easy...</p>
-      <a class="btn" href="planting-in-containers.html" style="width:auto">Read the full containers guide</a>
-    </article>
+<article class="card post">
+<h2>🍍 How I Planted Pineapples at Home</h2>
+<div class="date">Posted November 2025</div>
+<img class="main" src="images/pineapple-tops.jpg" alt="Pineapple tops growing in full sun"/>
+<p>I planted pineapples using tops from market fruits, and the results have been amazing.</p>
+<a class="btn" href="pineapple.html">Read the full pineapple guide</a>
+</article>
 
-    <article class="card post">
-      <h2>🌱 Wondering Why Your Seeds Didn’t Grow?</h2>
-      <div class="date">Posted November 2025</div>
-      <img class="main" src="images/seed-packet-with-date.jpg" alt="Seeds"/>
-      <p>You planted your seeds, watered them, and waited... and nothing came up. Here is why that happens...</p>
-      <a class="btn" href="seed-info.html" style="width:auto">Read the full seed guide</a>
-    </article>
-  </section>
+<article class="card post">
+<h2>🌱 Planting in Containers</h2>
+<div class="date">Posted October 2025</div>
+<img class="main" src="images/container-01.jpg" alt="Plants growing in containers"/>
+<p>At home, I’ve planted flowers, fever grass, aloe vera and more in simple containers.</p>
+<a class="btn" href="planting-in-containers.html">Read the full containers guide</a>
+</article>
 
-  <aside>
-    <div class="card about">
-      <img src="images/kev-circle.png" alt="Kevin"/>
-      <div><strong>About Kevin</strong><br/>Helping people grow healthy plants using simple, natural methods.</div>
-    </div>
+<article class="card post">
+<h2>🌱 Wondering Why Your Seeds Didn’t Grow?</h2>
+<div class="date">Posted November 2025</div>
+<img class="main" src="images/seed-packet-with-date.jpg" alt="Seed packet showing planting date"/>
+<p>You planted your seeds, watered them, and waited... and nothing came up. Here is why that happens.</p>
+<a class="btn" href="seed-info.html">Read the full seed guide</a>
+</article>
 
-    <div class="card sidebar-section">
-      <h4>Follow on YouTube</h4>
-      <iframe class="yt-embed" src="https://www.youtube.com/embed/APF2cXIATJc?start=40" allowfullscreen></iframe>
-      <a class="btn btn-yt" href="https://www.youtube.com/@gardeningwithkev" target="_blank">Visit my YouTube</a>
-    </div>
+</section>
 
-    <div class="card sidebar-section">
-      <h4>Contact & Socials</h4>
-      <a class="btn btn-linktree" href="contact.html">Connect With Me</a>
-    </div>
+<aside>
 
-    <div class="card sidebar-section">
-      <h4>🌿 Featured Tools</h4>
-      <div class="amazon-prod">
-        <img src="images/fiskars-shears.jpg"/>
-        <div><strong>Fiskars Shears</strong><br/><a href="https://amzn.to/4o0d8nK" target="_blank">Buy on Amazon</a><em>click on the link and check out these products</em></div>
-      </div>
-      <div class="amazon-prod">
-        <img src="images/hiraliy-drip.jpg"/>
-        <div><strong>HIRALIY Drip Kit</strong><br/><a href="https://amzn.to/3JlKrSY" target="_blank">Buy on Amazon</a><em>click on the link and check out these products</em></div>
-      </div>
-      <div class="amazon-prod">
-        <img src="images/workpro-shear.jpg"/>
-        <div><strong>WORKPRO Grass Shear</strong><br/><a href="https://amzn.to/3J4Icn3" target="_blank">Buy on Amazon</a><em>click on the link and check out these products</em></div>
-      </div>
-      <div class="amazon-prod">
-        <img src="images/veggie-seeds.jpg"/>
-        <div><strong>55 Vegetable Seeds</strong><br/><a href="https://amzn.to/4nesrYu" target="_blank">Buy on Amazon</a><em>click on the link and check out these products</em></div>
-      </div>
-      <div class="amazon-prod">
-        <img src="images/mini-chainsaw.jpg"/>
-        <div><strong>4″ Mini Chainsaw</strong><br/><a href="https://amzn.to/4nWMWdr" target="_blank">Buy on Amazon</a><em>click on the link and check out these products</em></div>
-      </div>
-      <p style="font-size:11px; color:#999; margin-top:15px;">Disclosure: As an Amazon Associate I earn from qualifying purchases. #ads</p>
-    </div>
-  </aside>
+<div class="card about">
+<img src="images/kev-circle.png" alt="Kevin"/>
+<div><strong>About Kevin</strong><br/>Helping people grow healthy plants using simple, natural methods.</div>
+</div>
+
+<div class="card">
+<h4>Follow on YouTube</h4>
+<iframe class="yt-embed" src="https://www.youtube.com/embed/APF2cXIATJc?start=40" allowfullscreen></iframe>
+<a class="btn btn-yt" href="https://www.youtube.com/@gardeningwithkev" target="_blank">Visit my YouTube</a>
+</div>
+
+<div class="card">
+<h4>Contact & Socials</h4>
+<a class="btn btn-linktree" href="contact.html">Connect With Me</a>
+</div>
+
+<div class="card">
+<h4>🌿 Featured Tools</h4>
+
+<div class="amazon-prod">
+<img src="images/fiskars-shears.jpg" alt="Fiskars Shears"/>
+<div>
+<strong>Fiskars Shears</strong><br/>
+<a href="https://amzn.to/4o0d8nK" target="_blank" rel="nofollow noopener sponsored">Buy on Amazon</a>
+<em>click on the link and check out these products</em>
+</div>
+</div>
+
+<div class="amazon-prod">
+<img src="images/hiraliy-drip.jpg" alt="HIRALIY Drip Kit"/>
+<div>
+<strong>HIRALIY Drip Kit</strong><br/>
+<a href="https://amzn.to/3JlKrSY" target="_blank" rel="nofollow noopener sponsored">Buy on Amazon</a>
+<em>click on the link and check out these products</em>
+</div>
+</div>
+
+<div class="amazon-prod">
+<img src="images/workpro-shear.jpg" alt="WORKPRO Grass Shear"/>
+<div>
+<strong>WORKPRO Grass Shear</strong><br/>
+<a href="https://amzn.to/3J4Icn3" target="_blank" rel="nofollow noopener sponsored">Buy on Amazon</a>
+<em>click on the link and check out these products</em>
+</div>
+</div>
+
+<div class="amazon-prod">
+<img src="images/veggie-seeds.jpg" alt="Vegetable Seeds"/>
+<div>
+<strong>55 Vegetable Seeds</strong><br/>
+<a href="https://amzn.to/4nesrYu" target="_blank" rel="nofollow noopener sponsored">Buy on Amazon</a>
+<em>click on the link and check out these products</em>
+</div>
+</div>
+
+<div class="amazon-prod">
+<img src="images/mini-chainsaw.jpg" alt="Mini Chainsaw"/>
+<div>
+<strong>4″ Mini Chainsaw</strong><br/>
+<a href="https://amzn.to/4nWMWdr" target="_blank" rel="nofollow noopener sponsored">Buy on Amazon</a>
+<em>click on the link and check out these products</em>
+</div>
+</div>
+
+<p style="font-size:11px;color:#999;">Disclosure: As an Amazon Associate I earn from qualifying purchases. #ads</p>
+</div>
+
+</aside>
 </main>
 
 <footer>
-    <div style="margin-bottom:8px;">
-      <img alt="Gardening With Kev Logo" src="gwk-logo.png" style="width:90px; height:auto; border-radius:999px;"/>
-    </div>
-    <div>© <span id="year"></span> Gardening With Kev</div>
-    <div style="margin-top:4px">Made with love in Jamaica 🌴 by Gardening With Kev</div>
-    <div style="font-size:12px;margin-top:8px;">
-      <a href="privacy.html">Privacy Policy</a> | <a href="contact.html">Contact</a>
-    </div>
-    <div style="font-size:11px;color:#999;margin-top:10px">As an Amazon Associate I earn from qualifying purchases.</div>
-</footer>
+<img src="gwk-logo.png" style="width:90px;border-radius:999px" alt="Gardening With Kev logo"/>
+<div>© <span id="year"></span> Gardening With Kev</div>
+<div style="margin-top:6px">Made with love in Jamaica 🌴 by Gardening With Kev</div>
+<div style="font-size:12px;margin-top:8px;">
+<a href="privacy.html">Privacy Policy</a> | <a href="contact.html">Contact</a>
 </div>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<div style="font-size:11px;color:#999;margin-top:10px">As an Amazon Associate I earn from qualifying purchases.</div>
+</footer>
+
+</div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
+
