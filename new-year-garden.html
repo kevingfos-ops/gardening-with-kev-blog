@@ -28,11 +28,52 @@ nav a{margin-left:12px;text-decoration:none;color:#666;font-weight:500;font-size
 nav a:hover{color:#000}
 .post-card{background:#fff;padding:30px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.05)}
 h1{color:var(--green);margin-top:0}
-.article-img{width:100%;max-width:520px;display:block;margin:25px auto;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.1)}
-.img-caption{text-align:center;font-size:13px;color:#666;margin-top:-12px;margin-bottom:25px;font-style:italic}
-.highlight-box{background:#f0f7ff;border-left:5px solid var(--accent);padding:15px;margin:20px 0;border-radius:0 8px 8px 0}
-.btn{display:inline-block;padding:12px 20px;background:var(--green);color:#fff;text-decoration:none;border-radius:8px;font-weight:600;margin-top:20px}
-footer{text-align:center;margin-top:40px;padding:20px;color:#666;font-size:14px}
+
+/* Slightly smaller images */
+.article-img{
+  width:100%;
+  max-width:420px;
+  display:block;
+  margin:25px auto;
+  border-radius:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1)
+}
+
+.img-caption{
+  text-align:center;
+  font-size:13px;
+  color:#666;
+  margin-top:-12px;
+  margin-bottom:25px;
+  font-style:italic
+}
+
+.highlight-box{
+  background:#f0f7ff;
+  border-left:5px solid var(--accent);
+  padding:15px;
+  margin:20px 0;
+  border-radius:0 8px 8px 0
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 20px;
+  background:var(--green);
+  color:#fff;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:600;
+  margin-top:20px
+}
+
+footer{
+  text-align:center;
+  margin-top:40px;
+  padding:20px;
+  color:#666;
+  font-size:14px
+}
 </style>
 </head>
 
@@ -66,9 +107,8 @@ footer{text-align:center;margin-top:40px;padding:20px;color:#666;font-size:14px}
 <p>You don’t have to start big. You can start with a few seeds and a simple container that you can keep on your verandah or balcony, if space where you live is a challenge.</p>
 
 <!-- Image 1 -->
- 
+<img src="images/tomatoes-5-gallon.jpg" class="article-img" alt="Tomatoes growing in a cut 5-gallon oil bottle">
 <div class="img-caption">
-  <img src="images/tomatoes-5-gallon.jpg" class="article-img" alt="Tomatoes growing in a cut 5-gallon oil bottle">
 Starting small — tomatoes growing strong in a simple cut 5-gallon oil bottle.
 </div>
 
@@ -111,6 +151,3 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 </body>
 </html>
-
-
-
