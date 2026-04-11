@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JL4D4ENVQQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JL4D4ENVQQ');
+  </script>
+
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Thank You – Gardening With Kev</title>
+  <meta name="description" content="Thank you for supporting Gardening With Kev. You will be redirected shortly.">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body class="thankyou-page">
+
+  <div class="box">
+    <h1>Thank You for Your Support 🌿</h1>
+
+    <p>
+      Thank you for clicking through to view a product.  
+      This helps support <strong>Gardening With Kev</strong>.
+    </p>
+
+    <p>You will be redirected shortly.</p>
+
+    <p>
+      If nothing happens, click below:
+    </p>
+
+    <p>
+      <a id="fallback-link" class="btn" href="#">Go to product</a>
+    </p>
+  </div>
+
+  <script>
+    function getParam(name){
+      var params = new URLSearchParams(window.location.search);
+      return params.get(name);
+    }
+
+    var target = getParam('to');
+
+    if (target) {
+      var decoded = decodeURIComponent(target);
+      var link = document.getElementById('fallback-link');
+      link.href = decoded;
+
+      try {
+        gtag('event', 'amazon_click', {
+          'event_category': 'outbound',
+          'event_label': decoded
+        });
+      } catch(e) {}
+
+      setTimeout(function(){
+        window.location.href = decoded;
+      }, 800);
+    } else {
+      document.querySelector('.box p:nth-of-type(2)').textContent =
+        "We couldn’t find a product link. You can return to the homepage.";
+
+      var link = document.getElementById('fallback-link');
+      link.textContent = "Back to Home";
+      link.href = "index.html";
+    }
+  </script>
+
+</body>
+</html>
