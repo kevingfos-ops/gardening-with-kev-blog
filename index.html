@@ -1,17 +1,3 @@
-<!-- Gardening With Kev v7 | Updated January 2026 -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-<title>Gardening With Kev</title>
-<meta name="description" content="Gardening With Kev – Simple, natural gardening inspired by Jamaica. Learn to grow plants in everyday containers and discover affordable gardening tips."/>
-
-<link rel="icon" href="favicon.png" type="image/png"/>
-
-<style>
 :root{
   --accent:#2b6cb0;
   --muted:#666;
@@ -19,16 +5,150 @@
   --card:#ffffff;
   --bg:#f7f7f8;
   --text:#111;
+  --brand:#2b6cb0;
+  --shadow:0 10px 20px rgba(0,0,0,0.06),0 2px 6px rgba(0,0,0,0.05);
+  --radius:16px;
+  --maxw:1100px;
 }
+
 *{box-sizing:border-box}
+
 body{
   margin:0;
-  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
   background:var(--bg);
   color:var(--text);
+  line-height:1.6;
 }
-.container{max-width:1100px;margin:28px auto;padding:0 18px}
-a{text-decoration:none;color:var(--accent)}
+
+a{
+  color:var(--accent);
+  text-decoration:none;
+}
+
+a:hover{
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+}
+
+/* shared helpers */
+.muted{
+  color:var(--muted);
+}
+
+.text-small-muted{
+  font-size:12px;
+  color:#666;
+}
+
+.disclosure-mini{
+  font-size:11px;
+  color:#6b7280;
+  margin-top:4px;
+}
+
+.gwk-link{
+  color:#2b6cb0;
+  text-decoration:none;
+}
+
+/* ---------- shared GWK header / footer ---------- */
+
+.gwk-site-header{
+  background:#ffffff;
+  border-bottom:1px solid rgba(0,0,0,0.06);
+  box-shadow:0 2px 4px rgba(0,0,0,0.04);
+  padding:10px 16px;
+}
+
+.gwk-header-inner{
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.gwk-brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.gwk-logo{
+  width:48px;
+  height:48px;
+  border-radius:999px;
+  object-fit:cover;
+}
+
+.gwk-site-title{
+  font-weight:800;
+  font-size:16px;
+}
+
+.gwk-tagline{
+  font-size:12px;
+  color:#2f6e3f;
+}
+
+.gwk-nav a{
+  margin-left:10px;
+  font-size:13px;
+  color:#555;
+  text-decoration:none;
+}
+
+.gwk-nav a:hover{
+  color:#000;
+}
+
+.gwk-footer{
+  margin-top:24px;
+  padding:18px 12px 22px;
+  text-align:center;
+  background:#f3f4f6;
+  color:#555;
+  font-size:13px;
+}
+
+.gwk-footer-logo-wrap{
+  margin-bottom:6px;
+}
+
+.gwk-footer-logo{
+  width:72px;
+  height:72px;
+  border-radius:999px;
+  object-fit:cover;
+}
+
+.gwk-footer-line{
+  margin-top:4px;
+}
+
+.gwk-footer-small{
+  margin-top:4px;
+  font-size:11px;
+  color:#777;
+}
+
+.footer-logo-large{
+  width:90px;
+  border-radius:999px;
+}
+
+/* ---------- index / homepage ---------- */
+
+.container{
+  max-width:1100px;
+  margin:28px auto;
+  padding:0 18px;
+}
 
 header{
   display:flex;
@@ -36,12 +156,31 @@ header{
   align-items:center;
   gap:12px;
 }
-.brand{display:flex;align-items:center;gap:12px}
-.logo{width:80px;border-radius:999px}
-.tagline{color:#2f6e3f;font-size:13px}
 
-nav a{margin-left:12px;color:#555}
-nav a:hover{color:#000}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo{
+  width:80px;
+  border-radius:999px;
+}
+
+.tagline{
+  color:#2f6e3f;
+  font-size:13px;
+}
+
+nav a{
+  margin-left:12px;
+  color:#555;
+}
+
+nav a:hover{
+  color:#000;
+}
 
 .site-banner{
   width:100%;
@@ -53,16 +192,26 @@ nav a:hover{color:#000}
   margin:18px 0;
   position:relative;
 }
+
 .site-banner__overlay{
-  position:absolute;inset:0;
+  position:absolute;
+  inset:0;
   background:linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,.2));
   border-radius:12px;
 }
+
 .site-banner__text{
-  position:absolute;inset:0;
-  display:flex;align-items:center;justify-content:center;
-  color:#fff;font-weight:800;font-size:clamp(18px,3vw,26px);
-  text-align:center;padding:0 12px;
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-weight:800;
+  font-size:clamp(18px,3vw,26px);
+  text-align:center;
+  padding:0 12px;
+  z-index:1;
 }
 
 .hero{
@@ -70,16 +219,26 @@ nav a:hover{color:#000}
   grid-template-columns:1fr 320px;
   gap:18px;
 }
-.card{
+
+.hero .card,
+#index-page .card{
   background:var(--card);
   border-radius:12px;
   padding:18px;
   box-shadow:0 6px 18px rgba(0,0,0,.05);
 }
-.post h2{margin-top:0;color:var(--green)}
-.date{font-size:13px;color:var(--muted);margin-bottom:8px}
 
-/* ✅ UPDATED IMAGE SIZE */
+.post h2{
+  margin-top:0;
+  color:var(--green);
+}
+
+.date{
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:8px;
+}
+
 .post img.main{
   width:100%;
   max-width:480px;
@@ -92,20 +251,43 @@ nav a:hover{color:#000}
   display:inline-block;
   padding:10px 14px;
   background:#2b6cb0;
-  color:#fff;border-radius:8px;
-  font-weight:600;font-size:14px;
+  color:#fff;
+  border-radius:8px;
+  font-weight:600;
+  font-size:14px;
+  text-decoration:none;
 }
 
-.about{display:flex;gap:12px;align-items:center}
-.about img{width:64px;height:64px;border-radius:999px}
+.about{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
 
-.yt-embed{width:100%;height:315px;border:0;border-radius:8px}
+.about img{
+  width:64px;
+  height:64px;
+  border-radius:999px;
+}
+
+.yt-embed{
+  width:100%;
+  height:315px;
+  border:0;
+  border-radius:8px;
+}
 
 .amazon-prod{
-  display:flex;gap:12px;margin-bottom:14px;
+  display:flex;
+  gap:12px;
+  margin-bottom:14px;
 }
+
 .amazon-prod img{
-  width:110px;height:110px;border-radius:8px;object-fit:cover;
+  width:110px;
+  height:110px;
+  border-radius:8px;
+  object-fit:cover;
 }
 
 footer{
@@ -115,170 +297,733 @@ footer{
   color:#666;
 }
 
-@media(max-width:880px){
-  .hero{grid-template-columns:1fr}
+/* ---------- about page ---------- */
+
+.about-page-container{
+  max-width:900px;
+  margin:20px auto;
+  padding:0 16px;
 }
-</style>
 
-</head>
-<body>
-<div class="container">
+.about-title{
+  font-size:28px;
+  font-weight:800;
+  margin-top:20px;
+  color:#2f6e3f;
+  text-align:center;
+}
 
-<header id="top">
-  <div class="brand">
-    <img src="gwk-logo.png" class="logo" alt="Gardening With Kev">
-    <div>
-      <strong>Gardening With Kev</strong>
-      <div class="tagline">Simple, natural gardening inspired by Jamaica</div>
-    </div>
-  </div>
-  <nav>
-    <a href="#top">Home</a>
-    <a href="about.html">About</a>
-    <a href="#posts">Posts</a>
-    <a href="books.html">Books &amp; eBooks</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+.about-section{
+  background:#fff;
+  padding:24px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(20,20,30,.05);
+  margin-bottom:20px;
+}
 
-<section class="site-banner">
-  <div class="site-banner__overlay"></div>
-  <div class="site-banner__text">
-    Simple, natural gardening inspired by Jamaica 🌴
-  </div>
-</section>
+.about-section h2{
+  margin-top:0;
+  color:#2f6e3f;
+}
 
-<main class="hero">
+.about-section ul{
+  margin-top:6px;
+  margin-bottom:12px;
+  padding-left:20px;
+}
 
-<!-- POSTS -->
-<section id="posts">
+.author-highlight{
+  background:#f0f7ff;
+  border-left:5px solid #2b6cb0;
+}
 
-<!-- New Year Post -->
-<article class="card post">
-  <h2>🌱 New Year, New Garden – Start Where You Are</h2>
-  <div class="date">Posted January 2026</div>
-  <img src="images/tomatoes-5-gallon.jpg" class="main" alt="Tomatoes in recycled container">
-  <p>
-    As we enter the new year, many of us set new goals. This year I want to encourage
-    you to start your own home garden — even if you think you don’t have space,
-    time, or a green thumb.
-  </p>
-  <a class="btn" href="new-year-garden.html">Read the full guide</a>
-</article>
+.btn-author{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 18px;
+  background:#2b6cb0;
+  color:#fff !important;
+  border-radius:8px;
+  font-weight:700;
+  font-size:14px;
+  text-decoration:none;
+}
 
-<!-- Aloe -->
-<article class="card post">
-  <h2>🌿 Aloe Vera: The Healing Plant Every Home Should Have</h2>
-  <div class="date">Posted October 2025</div>
-  <img src="images/aloe-vera.jpg" class="main" alt="Aloe Vera">
-  <p>Aloe Vera is one of the most useful and low-maintenance plants...</p>
-  <a class="btn" href="aloe-vera.html">Read full guide</a>
-</article>
+.btn-author-black{
+  background:#111;
+  margin-left:8px;
+}
 
-<!-- Life Plant -->
-<article class="card post">
-  <h2>🌿 The Life Plant and Its Healing Power</h2>
-  <div class="date">Posted October 2025</div>
-  <img src="images/life-plant.jpg" class="main" alt="Life Plant">
-  <p>The Life Plant, also called Wonder of the World...</p>
-  <a class="btn" href="life-plant.html">Read full guide</a>
-</article>
+.about-profile-image-wrap{
+  text-align:center;
+  margin-bottom:16px;
+}
 
-<!-- Pineapple -->
-<article class="card post">
-  <h2>🍍 How I Planted Pineapples at Home</h2>
-  <div class="date">Posted November 2025</div>
-  <img src="Pineapple from tops planted in full sun.jpg" class="main" alt="Pineapple">
-  <p>I planted pineapples using tops from market fruits...</p>
-  <a class="btn" href="pineapple.html">Read full guide</a>
-</article>
+.about-profile-image{
+  width:120px;
+  height:120px;
+  border-radius:999px;
+  object-fit:cover;
+}
 
-</section>
+/* ---------- books page ---------- */
 
-<!-- SIDEBAR -->
-<aside>
+.books-container{
+  max-width:var(--maxw);
+  margin:32px auto;
+  padding:0 20px 48px;
+}
 
-<div class="card about" id="contact">
-  <img src="images/kev-circle.png" alt="Kevin">
-  <div>
-    <strong>About Kevin</strong><br>
-    Hi, I’m Kevin! I love helping people grow healthy plants using simple,
-    natural Jamaican gardening traditions.
-  </div>
-</div>
+.banner-row{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
+  margin:8px 0 24px;
+}
 
-<div class="card">
-  <h4>Follow on YouTube</h4>
-  <iframe class="yt-embed" src="https://www.youtube.com/embed/APF2cXIATJc?start=40" allowfullscreen></iframe>
-  <br><br>
-  <a class="btn" href="https://www.youtube.com/@gardeningwithkev" target="_blank">Visit my YouTube</a>
-</div>
+.banner{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  padding:16px;
+  border-radius:var(--radius);
+  background:#f8fafc;
+  box-shadow:var(--shadow);
+  text-decoration:none;
+  color:var(--text);
+}
 
-<div class="card">
-  <h4>Contact Kevin</h4>
-  <a class="btn" href="https://linktr.ee/kevingfos" target="_blank">Message me on Linktree</a>
-</div>
+.banner strong{
+  font-weight:800;
+}
 
-<div class="card">
-  <h4>🌿 Featured Products &amp; Tools</h4>
-  <p style="font-size:12px;color:#666;">As an Amazon Associate I earn from qualifying purchases.</p>
+.banner small{
+  color:#6b7280;
+}
 
-  <div class="amazon-prod">
-    <img src="images/fiskars-shears.jpg" alt="">
-    <div>
-      <strong>Fiskars Pruning Shears</strong><br>
-      <a href="https://amzn.to/4o0d8nK" target="_blank">Buy on Amazon</a><br>
-      <em>click on the link and check out these products</em>
-    </div>
-  </div>
+.section-title{
+  font-size:clamp(22px,2.5vw,32px);
+  margin:24px 0 12px;
+  color:#2d3748;
+  border-bottom:2px solid #e2e8f0;
+  padding-bottom:8px;
+}
 
-  <div class="amazon-prod">
-    <img src="images/hiraliy-drip.jpg" alt="">
-    <div>
-      <strong>HIRALIY Drip Kit</strong><br>
-      <a href="https://amzn.to/3JlKrSY" target="_blank">Buy on Amazon</a><br>
-      <em>click on the link and check out these products</em>
-    </div>
-  </div>
+.grid{
+  display:grid;
+  grid-template-columns:repeat(1,minmax(0,1fr));
+  gap:18px;
+}
 
-  <div class="amazon-prod">
-    <img src="images/workpro-shear.jpg" alt="">
-    <div>
-      <strong>WORKPRO Grass Shear</strong><br>
-      <a href="https://amzn.to/3J4Icn3" target="_blank">Buy on Amazon</a><br>
-      <em>click on the link and check out these products</em>
-    </div>
-  </div>
+.books-container .card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  padding:0;
+}
 
-  <div class="amazon-prod">
-    <img src="images/veggie-seeds.jpg" alt="">
-    <div>
-      <strong>55 Vegetable Seeds Pack</strong><br>
-      <a href="https://amzn.to/4nesrYu" target="_blank">Buy on Amazon</a><br>
-      <em>click on the link and check out these products</em>
-    </div>
-  </div>
+.books-container .card .img-wrap{
+  display:block;
+}
 
-</div>
+.books-container .card img{
+  width:100%;
+  height:auto;
+  display:block;
+}
 
-</aside>
+.books-container .card .body{
+  padding:14px;
+}
 
-</main>
+.books-container .card h3{
+  margin:0 0 6px;
+  font-size:18px;
+}
 
-<footer>
-  <img src="gwk-logo.png" alt="Gardening With Kev" style="width:90px;border-radius:999px"><br><br>
-  © <span id="year"></span> Gardening With Kev<br>
-  Made with love in Jamaica 🌴<br>
-  <a href="privacy.html">Privacy Policy</a><br>
-  As an Amazon Associate I earn from qualifying purchases.<br>
-  Last Updated: January 2026
-</footer>
+.tag{
+  display:inline-block;
+  padding:2px 8px;
+  border-radius:999px;
+  background:#ecfeff;
+  color:#0369a1;
+  border:1px solid #cffafe;
+  font-size:12px;
+  margin-bottom:8px;
+}
 
-</div>
+.tag-author{
+  background:#fef3c7;
+  color:#92400e;
+  border:1px solid #fde68a;
+}
 
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+.featured{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:22px;
+  background:var(--card);
+  border-radius:calc(var(--radius) + 4px);
+  padding:18px;
+  box-shadow:var(--shadow);
+  margin-bottom:28px;
+}
 
-</body>
-</html>
+.featured img{
+  width:100%;
+  height:auto;
+  border-radius:var(--radius);
+  display:block;
+}
+
+.featured .content h2{
+  margin:0 0 10px;
+  font-size:clamp(22px,2.5vw,30px);
+}
+
+.btn-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.btn-primary{
+  background:var(--brand);
+  color:#fff;
+}
+
+/* ---------- post pages ---------- */
+
+.post-page{
+  font-family:Arial,sans-serif;
+  background:#f5f5f0;
+  color:#333;
+}
+
+.post-page header{
+  background:#3f7c3a;
+  color:#fff;
+  padding:1.5rem 1rem;
+  text-align:center;
+  display:block;
+}
+
+.post-page header h1{
+  margin:0 0 0.3rem 0;
+  font-size:1.6rem;
+}
+
+.post-page header p{
+  margin:0;
+  font-size:0.95rem;
+}
+
+.back-link{
+  margin-top:0.6rem;
+  font-size:0.85rem;
+}
+
+.back-link a{
+  color:#e5f7e5;
+  text-decoration:underline;
+}
+
+.post-main{
+  max-width:900px;
+  margin:1.5rem auto;
+  padding:0 1rem 2.5rem;
+}
+
+.post-main.wide{
+  max-width:1100px;
+}
+
+.post-main h2{
+  margin-top:1.8rem;
+  color:#2f5f2b;
+}
+
+.post-main h3,
+.post-main h4{
+  margin-top:1.2rem;
+  color:#365a34;
+}
+
+.intro{
+  background:#ffffff;
+  padding:1rem 1rem 1.2rem;
+  border-radius:6px;
+  box-shadow:0 2px 4px rgba(0,0,0,0.06);
+}
+
+.main-image{
+  margin:1.2rem 0;
+  text-align:center;
+}
+
+.main-image img{
+  max-width:100%;
+  border-radius:10px;
+}
+
+.main-image.small img{
+  max-width:420px;
+  width:100%;
+}
+
+.main-image p{
+  font-size:0.9rem;
+  color:#555;
+  margin-top:0.4rem;
+}
+
+.gallery{
+  display:flex;
+  flex-wrap:wrap;
+  gap:1rem;
+  margin-top:1rem;
+  justify-content:center;
+}
+
+.gallery img{
+  max-width:260px;
+  border-radius:10px;
+  display:block;
+}
+
+.gallery.small img{
+  max-width:200px;
+}
+
+.highlight-box{
+  background:#fffbe6;
+  border-left:4px solid #f0b429;
+  padding:0.8rem 1rem;
+  margin:1rem 0;
+  border-radius:4px;
+  font-size:0.95rem;
+}
+
+.image-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:1rem;
+  margin:1.2rem 0;
+  justify-content:center;
+}
+
+.image-card{
+  background:#ffffff;
+  border-radius:6px;
+  padding:0.5rem;
+  box-shadow:0 2px 4px rgba(0,0,0,0.06);
+  max-width:260px;
+  text-align:center;
+  font-size:0.85rem;
+}
+
+.image-card img{
+  max-width:100%;
+  border-radius:4px;
+  display:block;
+  margin-bottom:0.4rem;
+}
+
+.video-wrapper{
+  position:relative;
+  padding-bottom:56.25%;
+  height:0;
+  overflow:hidden;
+  max-width:100%;
+  margin:1.5rem 0;
+  border-radius:8px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.15);
+  background:#000;
+}
+
+.video-wrapper iframe{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+.post-main ul,
+.post-main ol{
+  padding-left:1.2rem;
+}
+
+.post-main table{
+  width:100%;
+  border-collapse:collapse;
+  margin:1rem 0;
+  font-size:0.95rem;
+}
+
+.post-main th,
+.post-main td{
+  border:1px solid #ddd;
+  padding:0.6rem;
+  vertical-align:top;
+}
+
+.post-main th{
+  background:#e9f4e8;
+  text-align:left;
+}
+
+.amazon-section{
+  background:#ffffff;
+  padding:1rem 1rem 1.2rem;
+  border-radius:6px;
+  box-shadow:0 2px 4px rgba(0,0,0,0.06);
+  margin-top:2rem;
+}
+
+.amazon-flex{
+  display:flex;
+  flex-wrap:wrap;
+  gap:1rem;
+  align-items:flex-start;
+  margin-bottom:1rem;
+}
+
+.amazon-flex img{
+  max-width:260px;
+  border-radius:6px;
+  box-shadow:0 2px 4px rgba(0,0,0,0.08);
+}
+
+.amazon-item{
+  flex:1 1 220px;
+  margin-bottom:0.4rem;
+}
+
+.amazon-item.underlined{
+  padding-bottom:0.7rem;
+  border-bottom:1px dashed #ddd;
+  margin-bottom:0.9rem;
+}
+
+.amazon-item:last-child{
+  border-bottom:none;
+  margin-bottom:0.4rem;
+}
+
+.amazon-item strong{
+  display:block;
+}
+
+.disclosure{
+  font-size:0.8rem;
+  margin-top:0.4rem;
+  font-style:italic;
+}
+
+.footer-note{
+  text-align:center;
+  font-size:0.8rem;
+  margin-top:2rem;
+  color:#666;
+}
+
+.back-bottom{
+  text-align:center;
+  margin-top:1.8rem;
+}
+
+.back-bottom a{
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:8px;
+  background:#2b6cb0;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.back-bottom a:hover{
+  opacity:.9;
+}
+
+.article-shell{
+  max-width:800px;
+  margin:28px auto;
+  padding:0 18px;
+}
+
+.article-topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:20px;
+  background:#fff;
+  padding:15px;
+  border-radius:12px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.05);
+}
+
+.article-topbar .brand-inline{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.article-topbar .logo{
+  width:50px;
+  height:50px;
+  border-radius:999px;
+}
+
+.article-topbar nav a{
+  margin-left:12px;
+  text-decoration:none;
+  color:#666;
+  font-weight:500;
+  font-size:14px;
+}
+
+.post-card{
+  background:#fff;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,.05);
+}
+
+.post-card h1{
+  color:var(--green);
+  margin-top:0;
+}
+
+.article-img{
+  width:100%;
+  max-width:500px;
+  display:block;
+  margin:25px auto;
+  border-radius:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.img-caption{
+  text-align:center;
+  font-size:13px;
+  color:#666;
+  margin-top:-15px;
+  margin-bottom:25px;
+  font-style:italic;
+}
+
+.post-page .highlight-box.blue{
+  background:#f0f7ff;
+  border-left:5px solid var(--accent);
+  border-radius:0 8px 8px 0;
+}
+
+.post-simple-footer{
+  text-align:center;
+  margin-top:40px;
+  padding:20px;
+  color:#666;
+  font-size:14px;
+}
+
+/* ---------- privacy page ---------- */
+
+.privacy-page{
+  background:#f7f7f8;
+  color:#111;
+}
+
+.privacy-page .wrap{
+  max-width:900px;
+  margin:0 auto;
+  padding:1.5rem 1rem 3rem;
+}
+
+.privacy-page header{
+  text-align:center;
+  margin-bottom:1.5rem;
+  display:block;
+  background:none;
+  color:inherit;
+  padding:0;
+}
+
+.privacy-page h1{
+  font-size:1.7rem;
+  margin:0 0 .3rem;
+}
+
+.privacy-page h2{
+  font-size:1.2rem;
+  margin-top:1.8rem;
+  color:#14532d;
+}
+
+.privacy-page p,
+.privacy-page li{
+  font-size:.95rem;
+}
+
+.privacy-page .card{
+  background:#ffffff;
+  padding:1.25rem 1.1rem 1.4rem;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(15,23,42,0.06);
+}
+
+.back-btn,
+.prev-btn{
+  display:inline-block;
+  background:#2b6cb0;
+  color:#fff;
+  padding:10px 16px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  margin:10px 16px;
+}
+
+.back-btn:hover,
+.prev-btn:hover{
+  background:#255a96;
+}
+
+.privacy-page .site-banner{
+  position:relative;
+  width:100%;
+  height:200px;
+  border-radius:0;
+  background-image:url('images/banner.jpg');
+  background-size:cover;
+  background-position:center;
+  box-shadow:0 6px 18px rgba(20,20,30,.05);
+  margin-bottom:24px;
+}
+
+.privacy-page .site-banner__overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(0,0,0,.28), rgba(0,0,0,.18));
+  border-radius:0;
+}
+
+.privacy-page .site-banner__text{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+  font-weight:700;
+  letter-spacing:.2px;
+  font-size:clamp(20px,3.2vw,30px);
+  z-index:1;
+}
+
+/* ---------- thank-you page ---------- */
+
+.thankyou-page{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+}
+
+.thankyou-page .box{
+  background:#ffffff;
+  padding:24px 22px;
+  border-radius:14px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.06),0 2px 6px rgba(0,0,0,0.05);
+  max-width:420px;
+  text-align:center;
+}
+
+.thankyou-page h1{
+  margin-top:0;
+  font-size:22px;
+}
+
+.thankyou-page p{
+  font-size:14px;
+  line-height:1.6;
+  margin:8px 0;
+}
+
+.thankyou-page a.btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:9px 14px;
+  border-radius:999px;
+  background:#2b6cb0;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+}
+
+/* ---------- responsive ---------- */
+
+@media(max-width:880px){
+  .hero{
+    grid-template-columns:1fr;
+  }
+}
+
+@media (max-width:600px){
+  .gwk-header-inner{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .gwk-nav a{
+    margin-left:0;
+    margin-right:10px;
+  }
+
+  .btn-author-black{
+    margin-left:0;
+    margin-top:10px;
+  }
+
+  .post-page header h1{
+    font-size:1.3rem;
+  }
+
+  .post-main{
+    padding:0 0.7rem 2rem;
+  }
+
+  .amazon-flex{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .amazon-item.underlined{
+    border-bottom:none;
+  }
+}
+
+@media(min-width:720px){
+  .featured{
+    grid-template-columns:380px 1fr;
+    padding:22px;
+  }
+
+  .grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(min-width:1024px){
+  .grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
