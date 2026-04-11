@@ -104,3 +104,22 @@ footer{
 @media(max-width:880px){
   .hero{grid-template-columns:1fr}
 }
+/* Container page gallery fix */
+.container-gallery{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:10px;
+  margin-top:1rem;
+}
+
+.container-gallery img{
+  width:100%;
+  border-radius:10px;
+  display:block;
+}
+
+@media (max-width:600px){
+  .container-gallery{
+    grid-template-columns:1fr;
+  }
+}
